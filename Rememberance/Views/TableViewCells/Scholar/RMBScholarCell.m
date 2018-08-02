@@ -12,11 +12,13 @@
 #import "UIColor+RMBAdditions.h"
 #import "UIView+RMBAdditions.h"
 #import "Masonry.h"
+#import "RMBBookmarkView.h"
 
 @interface RMBScholarCell () <MGSwipeTableCellDelegate>
 
 @property (strong, nonatomic, readwrite) UIImageView *scholarImageView;
 @property (strong, nonatomic, readwrite) UILabel *scholarNameLabel;
+@property (strong, nonatomic, readwrite) RMBBookmarkView *bookmarkView;
 
 @end
 
@@ -48,8 +50,34 @@
       make.left.equalTo(self.scholarImageView.mas_right).offset(8);
       make.centerY.equalTo(self.contentView);
     }];
+    
+    self.bookmarkView = [[RMBBookmarkView alloc] initWithSize:16];
+    [self.contentView addSubview:self.bookmarkView];
+    [self.bookmarkView mas_makeConstraints:^(MASConstraintMaker *make) {
+      make.centerY.equalTo(self.contentView);
+      make.right.equalTo(self.contentView).offset(-8);
+      make.width.equalTo(@(16));
+      make.height.equalTo(@(16));
+    }];
+    
+    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"star_unhighlighted"] backgroundColor:[UIColor renovatioBackground]];
+    button.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    button.buttonWidth = 44;
+    self.rightButtons = @[button];
+    self.rightSwipeSettings.transition = MGSwipeTransitionDrag;
+    self.rightSwipeSettings.keepButtonsSwiped = NO;
+    self.delegate = self;
   }
   return self;
+}
+
+- (void)swipeTableCellWillEndSwiping:(MGSwipeTableCell *)cell {
+  if ([self.scholar.bookmarkedByMe boolValue]) {
+    [self.scholar unbookmark];
+  } else {
+    [self.scholar bookmark];
+  }
+  [self.bookmarkView setBookmarked:[self.scholar.bookmarkedByMe boolValue] animated:YES];
 }
 
 - (void)layoutSubviews {
@@ -57,10 +85,12 @@
 }
 
 - (void)setScholar:(RMBScholar *)scholar {
+  _scholar = scholar;
   self.scholarNameLabel.text = scholar.name;
   [self.scholarImageView sd_setImageWithURL:scholar.imageURL placeholderImage:[UIImage imageNamed:@"gray_placeholder"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
     [self setNeedsLayout];
   }];
+  self.bookmarkView.bookmarked = [self.scholar.bookmarkedByMe boolValue];
 }
 
 @end

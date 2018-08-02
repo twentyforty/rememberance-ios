@@ -16,5 +16,11 @@
 @property (copy, nonatomic) NSString *name;
 @property (copy, nonatomic) NSString *bio;
 @property (strong, nonatomic) NSURL *imageURL;
+@property (copy, nonatomic) NSNumber *videoCount;
+@property (copy, nonatomic) NSNumber *videoSeriesCount;
+@property (copy, nonatomic) NSNumber *bookmarkedByMe;
+
+- (void)bookmark;
+- (void)unbookmark;
 
 @end

@@ -13,4 +13,5 @@ target 'Rememberance' do
   pod 'youtube-ios-player-helper'
   pod 'VIMVideoPlayer', '~> 6.0.1'
   pod 'MGSwipeTableCell', '~> 1.6.7'
+  pod 'Overcoat', '~> 4.0.0-beta.2'
 end

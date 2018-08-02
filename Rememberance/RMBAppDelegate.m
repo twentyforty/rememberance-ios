@@ -39,7 +39,17 @@
   
   [UITableView appearance].separatorInset = UIEdgeInsetsZero;
   
-  [UINavigationBar.appearance setBackIndicatorImage:[UIImage imageNamed:@"back_button"]];
+//  [UINavigationBar.appearance setBackIndicatorImage:[UIImage imageNamed:@"back_button"]];
+//
+//  for (NSString* family in [[UIFont familyNames] sortedArrayUsingSelector:@selector(compare:)])
+//  {
+//    NSLog(@"%@", family);
+//
+//    for (NSString* name in [UIFont fontNamesForFamilyName: family])
+//    {
+//      NSLog(@"  %@", name);
+//    }
+//  }
   return YES;
 }
 

@@ -8,6 +8,7 @@
 
 #import "RMBModelCollection.h"
 #import "RMBClient.h"
+#import "OVCResponse.h"
 
 @interface RMBModelCollection ()
 
@@ -42,20 +43,31 @@
 }
 
 - (void)loadObjectsWithSuccess:(RMBCompletion)success failure:(RMBFailure)failure {
-  self.currentTask =
-      [[RMBClient sharedClient] GET:self.relativeRemotePath
-                         parameters:[self parametersForRequest]
-                           progress:nil
-                            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                              if (self.currentTask == task) {
-                                [self parseNextParameterFromResponseObject:responseObject];
-                                [self deserializeResults:responseObject completion:success];
-                              }
-                            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                              if (failure) {
-                                failure(@"error");
-                              }
-                            }];
+  self.currentTask = [[RMBClient sharedClient] GET:self.relativeRemotePath parameters:[self parametersForRequest] completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+    if (error) {
+      failure(@"error");
+    }
+    [self.objects addObjectsFromArray:response.result];
+//    if (self.currentTask == response.) {
+      [self parseNextParameterFromResponseObject:response.rawResult];
+    success();
+//      [self deserializeResults:responseObject completion:success];
+//    }
+  }];
+//  self.currentTask =
+//      [[RMBClient sharedClient] GET:self.relativeRemotePath
+//                         parameters:[self parametersForRequest]
+//                           progress:nil
+//                            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//                              if (self.currentTask == task) {
+//                                [self parseNextParameterFromResponseObject:responseObject];
+//                                [self deserializeResults:responseObject completion:success];
+//                              }
+//                            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//                              if (failure) {
+//                                failure(@"error");
+//                              }
+//                            }];
 }
 
 - (NSDictionary *)parametersForRequest {

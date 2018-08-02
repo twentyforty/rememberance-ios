@@ -52,18 +52,11 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   if (indexPath.row == 0) {
-    
-//    self.vimeoPlayerCell = [self.tableView dequeueReusableCellWithIdentifier:@"vimeo" forIndexPath:indexPath];
-//    self.vimeoPlayerCell.video = self.video;
-//    self.vimeoPlayerCell.player.delegate = self;
-//    [self.vimeoPlayerCell.player.player setURL:[NSURL URLWithString:@"https://vimeo.com/24581381/"]];
-//    [self.vimeoPlayerCell.player.player play];
-//    return self.vimeoPlayerCell;
     self.youtubePlayerCell = [self.tableView dequeueReusableCellWithIdentifier:@"youtube" forIndexPath:indexPath];
     self.youtubePlayerCell.video = self.video;
     NSMutableDictionary *playerVars = [NSMutableDictionary dictionaryWithDictionary:@{ @"controls" : @1, @"playsinline" : @1, @"autohide" : @1, @"showinfo" : @0, @"autoplay": @0, @"modestbranding" : @1 }];
-    if ([self.video.progress integerValue] > -1) {
-      playerVars[@"start"] = self.video.progress;
+    if ([self.video.progress.position integerValue]> -1) {
+      playerVars[@"start"] = self.video.progress.position;
     }
     [self.youtubePlayerCell.player loadWithVideoId:self.video.youtubeId playerVars:playerVars];
     
@@ -102,10 +95,10 @@
 
 - (void)playerView:(YTPlayerView *)playerView didChangeToState:(YTPlayerState)state {
   if (state == kYTPlayerStatePaused) {
-    NSLog(@"paused");
+    [self updateUserProgress];
   }
   if (state == kYTPlayerStateEnded) {
-    NSLog(@"ended");
+    [self.video markComplete];
   }
 }
 
@@ -120,8 +113,7 @@
 
 - (void)updateUserProgress {
   if (self.youtubePlayerCell.player.playerState == kYTPlayerStatePlaying ||
-      self.youtubePlayerCell.player.playerState == kYTPlayerStatePaused ||
-      self.youtubePlayerCell.player.playerState == kYTPlayerStateEnded) {
+      self.youtubePlayerCell.player.playerState == kYTPlayerStatePaused) {
     long position = (long)self.youtubePlayerCell.player.currentTime;
     [self.video updateProgressWithPosition:position];
   }

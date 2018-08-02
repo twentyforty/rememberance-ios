@@ -20,6 +20,10 @@ PODS:
   - Mantle/extobjc (2.1.0)
   - Masonry (1.1.0)
   - MGSwipeTableCell (1.6.7)
+  - Overcoat (4.0.0-beta.2):
+    - AFNetworking/NSURLSession (~> 3.0)
+    - AFNetworking/Serialization (~> 3.0)
+    - Mantle (~> 2.0)
   - PINCache (2.3)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
@@ -35,6 +39,7 @@ DEPENDENCIES:
   - Mantle (~> 2.1.0)
   - Masonry (~> 1.1.0)
   - MGSwipeTableCell (~> 1.6.7)
+  - Overcoat (~> 4.0.0-beta.2)
   - PINCache
   - SDWebImage
   - SVPullToRefresh (= 0.4.1)
@@ -49,6 +54,7 @@ SPEC REPOS:
     - Mantle
     - Masonry
     - MGSwipeTableCell
+    - Overcoat
     - PINCache
     - SDWebImage
     - SVPullToRefresh
@@ -62,6 +68,7 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MGSwipeTableCell: fb20e983988bde2b8d0df29c2d9e1d8ffd10b74a
+  Overcoat: 2ddaa6d66edebc375f3e24a37974631d5aff7ebe
   PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
@@ -69,6 +76,6 @@ SPEC CHECKSUMS:
   XLPagerTabStrip: 0f9f94246c84e7cb60a06ca435da68ac75c8b56e
   youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: dc7963cc80fa02647719705fc1d2dacb4cb97fab
+PODFILE CHECKSUM: 01b7bac5b88a45498f083b57a79ef18a5cd1e5f1
 
 COCOAPODS: 1.5.3

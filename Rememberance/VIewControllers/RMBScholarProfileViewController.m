@@ -17,6 +17,13 @@
 #import "RMBVideoViewController.h"
 #import "RMBScholarBioCell.h"
 #import "RMBVideosViewController.h"
+#import "RMBVideoSeriesViewController.h"
+
+typedef NS_ENUM(NSInteger, RMBScholarCellType) {
+  RMBScholarCellTypeBio,
+  RMBScholarCellTypeVideos,
+  RMBScholarCellTypeVideoSeries
+};
 
 @interface RMBScholarProfileViewController () <UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate, RMBHeaderViewDelegate>
 
@@ -24,7 +31,7 @@
 @property (strong, nonatomic, readwrite) RMBScholar *scholar;
 @property (strong, nonatomic, readwrite) UITableView *tableView;
 @property (strong, nonatomic, readwrite) RMBScholarBioCell *bioCell;
-
+@property (strong, nonatomic, readwrite) NSArray *cellTypes;
 @end
 
 @implementation RMBScholarProfileViewController
@@ -32,6 +39,18 @@
 - (instancetype)initWithScholar:(RMBScholar *)scholar {
   if (self = [super init]) {
     _scholar = scholar;
+
+    NSMutableArray *cellTypes = [NSMutableArray array];
+    if (self.scholar.bio) {
+      [cellTypes addObject:@(RMBScholarCellTypeBio)];
+    }
+    if ([self.scholar.videoCount integerValue] > 0) {
+      [cellTypes addObject:@(RMBScholarCellTypeVideos)];
+    }
+    if ([self.scholar.videoSeriesCount integerValue] > 0) {
+      [cellTypes addObject:@(RMBScholarCellTypeVideoSeries)];
+    }
+    _cellTypes = cellTypes;
   }
   return self;
 }
@@ -76,7 +95,7 @@
   if (self.tabBarController) {
     contentInset.bottom = 44;
   }
-  self.tableView.backgroundColor = [UIColor lightGrayColor];
+//  self.tableView.backgroundColor = [UIColor lightGrayColor];
   self.tableView.contentInset = contentInset;
 //  UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, self.tableView.height - 200)];
 //  footer.backgroundColor = [UIColor lightGrayColor];
@@ -85,34 +104,33 @@
   [self.tableView addSubview:self.headerView];
 }
 
+- (RMBScholarCellType)cellTypeAtIndexPath:(NSIndexPath *)indexPath {
+//  if (indexPath.row >= [self cellTypes].count) {
+//    return RMBScholarCellTypeNone;
+//  }
+  NSNumber *type = [self cellTypes][indexPath.row];
+  return [type integerValue];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-  return 4;
+  return self.cellTypes.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  if (indexPath.row == 0) {
+  RMBScholarCellType cellType = [self cellTypeAtIndexPath:indexPath];
+  if (cellType == RMBScholarCellTypeBio) {
     self.bioCell = [self.tableView dequeueReusableCellWithIdentifier:@"bio" forIndexPath:indexPath];
     self.bioCell.scholar = self.scholar;
     return self.bioCell;
-  } else if (indexPath.row == 1) {
+  } else if (cellType == RMBScholarCellTypeVideos) {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Video";
+    cell.textLabel.text = [NSString stringWithFormat:@"Videos (%@)", self.scholar.videoCount];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
-  } else if (indexPath.row == 2) {
+  } else if (cellType == RMBScholarCellTypeVideoSeries) {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Audio";
+    cell.textLabel.text = [NSString stringWithFormat:@"Video Series (%@)", self.scholar.videoSeriesCount];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
-  } else if (indexPath.row == 3) {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"Publication";
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    return cell;
-  } else {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = @"";
-    cell.accessoryType = UITableViewCellAccessoryNone;
     return cell;
   }
   return nil;
@@ -120,16 +138,23 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-  if (indexPath.row == 0) {
+  RMBScholarCellType cellType = [self cellTypeAtIndexPath:indexPath];
+  if (cellType == RMBScholarCellTypeBio) {
     if (!self.bioCell.expanded) {
       self.bioCell.expanded = YES;
       self.bioCell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [self.tableView beginUpdates];
     [self.tableView endUpdates];
-  } else if (indexPath.row == 1) {
+  } else if (cellType == RMBScholarCellTypeVideos) {
     NSString *remotePath = [NSString stringWithFormat:@"scholars/%ld/videos/", self.scholar.identifier];
     RMBVideosViewController *controller = [[RMBVideosViewController alloc] initWithRelativePath:remotePath];
+    controller.title = @"Videos";
+    [self.navigationController pushViewController:controller animated:YES];
+  } else if (cellType == RMBScholarCellTypeVideoSeries) {
+    NSString *remotePath = [NSString stringWithFormat:@"scholars/%ld/videoseries/", self.scholar.identifier];
+    RMBVideoSeriesViewController *controller = [[RMBVideoSeriesViewController alloc] initWithRelativePath:remotePath];
+    controller.title = @"Video Series";
     [self.navigationController pushViewController:controller animated:YES];
   }
 }
@@ -139,4 +164,3 @@
 }
 
 @end
-

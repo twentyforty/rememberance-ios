@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "RMBModel.h"
+#import "RMBMediaProgress.h"
+#import "RMBScholar.h"
+
+typedef NS_ENUM(NSInteger, RMBVideoProgressState) {
+  RMBVideoProgressStateNotStarted,
+  RMBVideoProgressStateStarted,
+  RMBVideoProgressStateCompleted
+};
 
 @interface RMBVideo : RMBModel
 
@@ -20,10 +28,18 @@
 @property (strong, nonatomic) NSURL *imageLargeURL;
 @property (copy, nonatomic) NSNumber *aspectRatio;
 @property (copy, nonatomic) NSNumber *duration;
-@property (copy, nonatomic) NSNumber *progress;
+@property (copy, nonatomic) RMBMediaProgress *progress;
 @property (copy, nonatomic) NSNumber *bookmarkedByMe;
+@property (strong, nonatomic) NSArray *scholars;
+
+@property (assign, nonatomic) RMBVideoProgressState state;
 @property (assign, nonatomic) float progressPercentage;
+@property (copy, nonatomic) NSString *lengthString;
 
 - (void)updateProgressWithPosition:(long)position;
+- (void)markComplete;
+- (void)markIncomplete;
+- (void)bookmark;
+- (void)unbookmark;
 
 @end

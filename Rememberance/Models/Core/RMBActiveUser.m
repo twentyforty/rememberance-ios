@@ -8,6 +8,7 @@
 
 #import "RMBActiveUser.h"
 #import "RMBClient.h"
+#import "OVCResponse.h"
 
 @implementation RMBActiveUser
 
@@ -63,31 +64,19 @@ static RMBActiveUser *sharedUser = nil;
 + (void)reloadFromServerWithSuccess:(RMBCompletion)success failure:(RMBFailure)failure {
   [[RMBClient sharedClient] GET:@"users/me/"
                      parameters:nil
-                       progress:nil
-                        success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                          [[self class] setActiveUserWithDictionary:responseObject success:success failure:failure];
-                        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                          failure(@"failed");
-                        }];
-}
-
-+ (void)setActiveUserWithDictionary:(NSDictionary *)dictionary
-                            success:(RMBCompletion)success
-                            failure:(RMBFailure)failure {
-  NSError *error;
-  RMBActiveUser *activeUser =
-    [MTLJSONAdapter modelOfClass:RMBActiveUser.class
-              fromJSONDictionary:dictionary
-                           error:&error];
-  if (error && failure) {
-    failure(@"error deserializing");
-  } else {
-    [[self class] setActiveUser:activeUser];
-    [[self class] saveActiveUserToDisk];
-    if (success) {
-      success();
-    }
-  }
+                     completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+                       if (error) {
+                         if (failure) {
+                           failure(@"failed");
+                         }
+                       } else {
+                         [[self class] setActiveUser:response.result];
+                         [[self class] saveActiveUserToDisk];
+                         if (success) {
+                           success();
+                         }
+                       }
+                     }];
 }
 
 + (void)setActiveUser:(RMBActiveUser *)activeUser {
@@ -113,7 +102,8 @@ static RMBActiveUser *sharedUser = nil;
 + (BOOL)loadTokenFromDisk {
   NSString *storedToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"usertoken"];
 //  storedToken = @"afa9596783857941a4ff367f00d445ab1f363610";
-  storedToken = @"95cca5ea679c8c22e1de51ef621acc729fff0f18";
+//  storedToken = @"95cca5ea679c8c22e1de51ef621acc729fff0f18";
+  storedToken = @"cdf4b2b8d2cb0120842200ba66cb4ff898b6509a";
   if (storedToken != nil) {
     [RMBClient sharedClient].token = storedToken;
     return YES;

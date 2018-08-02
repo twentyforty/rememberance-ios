@@ -7,8 +7,13 @@
 //
 
 #import "RMBClient.h"
+#import "RMBVideoSeries.h"
+#import "RMBVideo.h"
+#import "RMBScholar.h"
+#import "RMBResponse.h"
+#import "RMBActiveUser.h"
 
-#define DEV
+//#define DEV
 
 @interface RMBClient ()
 
@@ -43,6 +48,24 @@ static RMBClient *sharedClient = nil;
   [policy setAllowInvalidCertificates:YES];
   [policy setValidatesDomainName:NO];
   return policy;
+}
+
++ (NSDictionary<NSString *,id> *)responseClassesByResourcePath {
+  return @{@"**": [RMBResponse class]};
+}
+
++ (NSDictionary<NSString *,id> *)modelClassesByResourcePath {
+  return @{
+           @"users/me": [RMBActiveUser class],
+           @"videoseries": [RMBVideoSeries class],
+           @"videoseries/*": [RMBVideoSeries class],
+           @"videoseries/*/videos": [RMBVideo class],
+           @"videos/*": [RMBVideo class],
+           @"scholars": [RMBScholar class],
+           @"scholars/*": [RMBScholar class],
+           @"scholars/*/videos": [RMBVideo class],
+           @"scholars/*/videoseries": [RMBVideoSeries class],
+           };
 }
 
 @end

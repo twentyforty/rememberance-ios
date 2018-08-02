@@ -12,6 +12,7 @@
 #import <GSKStretchyHeaderView/GSKGeometry.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UIColor+RMBAdditions.h"
+#import "RMBBookmarkView.h"
 
 static const CGSize kUserImageSize = {.width = 100, .height = 100};
 
@@ -67,6 +68,7 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
   self.navBarImageView.layer.borderColor = [UIColor renovatioRed].CGColor;
   self.navBarImageView.layer.borderWidth = 2;
   self.navBarImageView.layer.cornerRadius = 18;
+  self.scholarImageView.contentMode = UIViewContentModeScaleAspectFill;
   [self.contentView addSubview:self.navBarImageView];
 
   self.scholarNameLabel = [[UILabel alloc] init];

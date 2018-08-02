@@ -10,8 +10,9 @@
 #import <UIKit/UIKit.h>
 
 #import "RMBVideo.h"
+#import "MGSwipeTableCell.h"
 
-@interface RMBVideoCell : UITableViewCell
+@interface RMBVideoCell : MGSwipeTableCell
 
 @property (strong, nonatomic, readwrite) RMBVideo *video;
 

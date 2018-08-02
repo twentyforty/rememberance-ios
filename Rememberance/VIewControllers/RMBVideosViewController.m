@@ -15,7 +15,6 @@
 @implementation RMBVideosViewController
 
 - (instancetype)initWithRelativePath:(NSString *)relativePath {
-  self.title = @"Video";
   RMBModelCollection *collection = [[RMBModelCollection alloc] initWithModelClass:[RMBVideo class]
                                                             andRelativeRemotePath:relativePath];
   return [super initWithCollection:collection];
@@ -23,7 +22,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-  [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+//  [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [self.tableView reloadData];
 }
 
 - (Class)tableViewCellClass {

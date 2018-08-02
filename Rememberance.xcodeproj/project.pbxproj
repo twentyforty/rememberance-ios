@@ -10,7 +10,9 @@
 		8275B080DA0FEED3EDC05F51 /* libPods-Rememberance.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC3E4CADB966EDC29282DA07 /* libPods-Rememberance.a */; };
 		86107A8C21022FD700F0C885 /* RMBYouTubePlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86107A8B21022FD700F0C885 /* RMBYouTubePlayerCell.m */; };
 		864B4DFC20FD011300CFEACE /* RMBClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 864B4DFB20FD011300CFEACE /* RMBClient.m */; };
-		865F511121024906002EBD1E /* RMBVimeoVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865F511021024906002EBD1E /* RMBVimeoVideoViewController.m */; };
+		865163C8210A984A000A82E4 /* Cardo104s.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 865163C7210A984A000A82E4 /* Cardo104s.ttf */; };
+		865163CB210CF690000A82E4 /* RMBVideoSeriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 865163CA210CF690000A82E4 /* RMBVideoSeriesViewController.m */; };
+		865163CE210CF728000A82E4 /* RMBVideoSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 865163CD210CF728000A82E4 /* RMBVideoSeries.m */; };
 		865F511421024924002EBD1E /* RMBVimeoPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 865F511321024924002EBD1E /* RMBVimeoPlayerCell.m */; };
 		865F51192103B0FD002EBD1E /* RMBScholarBioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 865F51182103B0FD002EBD1E /* RMBScholarBioCell.m */; };
 		865F511C210428D7002EBD1E /* UIColor+RMBAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 865F511B210428D7002EBD1E /* UIColor+RMBAdditions.m */; };
@@ -20,7 +22,6 @@
 		8678EA2F20FED47E00FB8E4B /* RMBModelCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8678EA2E20FED47E00FB8E4B /* RMBModelCollection.m */; };
 		8678EA3220FFA10300FB8E4B /* RMBVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8678EA3120FFA10300FB8E4B /* RMBVideo.m */; };
 		8678EA3520FFC0EA00FB8E4B /* RMBScholar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8678EA3420FFC0EA00FB8E4B /* RMBScholar.m */; };
-		8678EA3A2100F73E00FB8E4B /* RMBScholarPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8678EA392100F73E00FB8E4B /* RMBScholarPagerViewController.m */; };
 		8693C33E20FD0DFD00132065 /* RMBActiveUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693C33D20FD0DFD00132065 /* RMBActiveUser.m */; };
 		8693C34120FD214100132065 /* RMBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693C34020FD214100132065 /* RMBUser.m */; };
 		8693C34520FD21BB00132065 /* RMBUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8693C34420FD21BB00132065 /* RMBUtils.m */; };
@@ -44,6 +45,13 @@
 		86AF207820FD73C80048F226 /* RMBHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF207720FD73C80048F226 /* RMBHomeViewController.m */; };
 		86AF207B20FD74060048F226 /* RMBDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF207A20FD74060048F226 /* RMBDiscoverViewController.m */; };
 		86AF207E20FD742A0048F226 /* RMBWorkspaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AF207D20FD742A0048F226 /* RMBWorkspaceViewController.m */; };
+		86F72D95210F9F4600F7170F /* RMBMediaProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F72D94210F9F4600F7170F /* RMBMediaProgress.m */; };
+		86F72D9B2111222600F7170F /* RMBVideoSeriesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F72D9A2111222600F7170F /* RMBVideoSeriesCell.m */; };
+		86F72D9E21112FCF00F7170F /* RMBScholarAvatarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F72D9D21112FCF00F7170F /* RMBScholarAvatarCell.m */; };
+		86F72DA12112236F00F7170F /* RMBScholarAvatarsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F72DA02112236F00F7170F /* RMBScholarAvatarsView.m */; };
+		86F72DA42112412100F7170F /* RMBSeriesProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F72DA32112412100F7170F /* RMBSeriesProgressView.m */; };
+		86FCB08C2113802F00D6B072 /* RMBResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FCB08B2113802F00D6B072 /* RMBResponse.m */; };
+		86FCB08F211388DA00D6B072 /* RMBBookmarkView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86FCB08E211388DA00D6B072 /* RMBBookmarkView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +60,11 @@
 		86107A8B21022FD700F0C885 /* RMBYouTubePlayerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBYouTubePlayerCell.m; sourceTree = "<group>"; };
 		864B4DFA20FD011300CFEACE /* RMBClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBClient.h; sourceTree = "<group>"; };
 		864B4DFB20FD011300CFEACE /* RMBClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBClient.m; sourceTree = "<group>"; };
-		865F510F21024906002EBD1E /* RMBVimeoVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBVimeoVideoViewController.h; sourceTree = "<group>"; };
-		865F511021024906002EBD1E /* RMBVimeoVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBVimeoVideoViewController.m; sourceTree = "<group>"; };
+		865163C7210A984A000A82E4 /* Cardo104s.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cardo104s.ttf; sourceTree = "<group>"; };
+		865163C9210CF690000A82E4 /* RMBVideoSeriesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RMBVideoSeriesViewController.h; path = Rememberance/VIewControllers/RMBVideoSeriesViewController.h; sourceTree = SOURCE_ROOT; };
+		865163CA210CF690000A82E4 /* RMBVideoSeriesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = RMBVideoSeriesViewController.m; path = Rememberance/VIewControllers/RMBVideoSeriesViewController.m; sourceTree = SOURCE_ROOT; };
+		865163CC210CF728000A82E4 /* RMBVideoSeries.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBVideoSeries.h; sourceTree = "<group>"; };
+		865163CD210CF728000A82E4 /* RMBVideoSeries.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBVideoSeries.m; sourceTree = "<group>"; };
 		865F511221024924002EBD1E /* RMBVimeoPlayerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBVimeoPlayerCell.h; sourceTree = "<group>"; };
 		865F511321024924002EBD1E /* RMBVimeoPlayerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBVimeoPlayerCell.m; sourceTree = "<group>"; };
 		865F51172103B0FD002EBD1E /* RMBScholarBioCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBScholarBioCell.h; sourceTree = "<group>"; };
@@ -72,8 +83,6 @@
 		8678EA3120FFA10300FB8E4B /* RMBVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBVideo.m; sourceTree = "<group>"; };
 		8678EA3320FFC08400FB8E4B /* RMBScholar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMBScholar.h; sourceTree = "<group>"; };
 		8678EA3420FFC0EA00FB8E4B /* RMBScholar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMBScholar.m; sourceTree = "<group>"; };
-		8678EA382100F73E00FB8E4B /* RMBScholarPagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBScholarPagerViewController.h; sourceTree = "<group>"; };
-		8678EA392100F73E00FB8E4B /* RMBScholarPagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBScholarPagerViewController.m; sourceTree = "<group>"; };
 		8693C33C20FD0DFD00132065 /* RMBActiveUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBActiveUser.h; sourceTree = "<group>"; };
 		8693C33D20FD0DFD00132065 /* RMBActiveUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBActiveUser.m; sourceTree = "<group>"; };
 		8693C33F20FD214100132065 /* RMBUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBUser.h; sourceTree = "<group>"; };
@@ -119,6 +128,20 @@
 		86AF207A20FD74060048F226 /* RMBDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBDiscoverViewController.m; sourceTree = "<group>"; };
 		86AF207C20FD742A0048F226 /* RMBWorkspaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBWorkspaceViewController.h; sourceTree = "<group>"; };
 		86AF207D20FD742A0048F226 /* RMBWorkspaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBWorkspaceViewController.m; sourceTree = "<group>"; };
+		86F72D93210F9F4600F7170F /* RMBMediaProgress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBMediaProgress.h; sourceTree = "<group>"; };
+		86F72D94210F9F4600F7170F /* RMBMediaProgress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBMediaProgress.m; sourceTree = "<group>"; };
+		86F72D992111222600F7170F /* RMBVideoSeriesCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBVideoSeriesCell.h; sourceTree = "<group>"; };
+		86F72D9A2111222600F7170F /* RMBVideoSeriesCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBVideoSeriesCell.m; sourceTree = "<group>"; };
+		86F72D9C21112FCF00F7170F /* RMBScholarAvatarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBScholarAvatarCell.h; sourceTree = "<group>"; };
+		86F72D9D21112FCF00F7170F /* RMBScholarAvatarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBScholarAvatarCell.m; sourceTree = "<group>"; };
+		86F72D9F2112236F00F7170F /* RMBScholarAvatarsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBScholarAvatarsView.h; sourceTree = "<group>"; };
+		86F72DA02112236F00F7170F /* RMBScholarAvatarsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBScholarAvatarsView.m; sourceTree = "<group>"; };
+		86F72DA22112412100F7170F /* RMBSeriesProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBSeriesProgressView.h; sourceTree = "<group>"; };
+		86F72DA32112412100F7170F /* RMBSeriesProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBSeriesProgressView.m; sourceTree = "<group>"; };
+		86FCB08A2113802F00D6B072 /* RMBResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBResponse.h; sourceTree = "<group>"; };
+		86FCB08B2113802F00D6B072 /* RMBResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBResponse.m; sourceTree = "<group>"; };
+		86FCB08D211388DA00D6B072 /* RMBBookmarkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RMBBookmarkView.h; sourceTree = "<group>"; };
+		86FCB08E211388DA00D6B072 /* RMBBookmarkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RMBBookmarkView.m; sourceTree = "<group>"; };
 		92AA57D879C89CDAE1400548 /* Pods-Rememberance.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rememberance.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rememberance/Pods-Rememberance.release.xcconfig"; sourceTree = "<group>"; };
 		DC3E4CADB966EDC29282DA07 /* libPods-Rememberance.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rememberance.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -157,8 +180,18 @@
 			children = (
 				864B4DFA20FD011300CFEACE /* RMBClient.h */,
 				864B4DFB20FD011300CFEACE /* RMBClient.m */,
+				86FCB08A2113802F00D6B072 /* RMBResponse.h */,
+				86FCB08B2113802F00D6B072 /* RMBResponse.m */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		865163C6210A9838000A82E4 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				865163C7210A984A000A82E4 /* Cardo104s.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		865F51152103B0B8002EBD1E /* Scholar */ = {
@@ -168,6 +201,8 @@
 				86A9A3832101087300274C26 /* RMBScholarCell.m */,
 				865F51172103B0FD002EBD1E /* RMBScholarBioCell.h */,
 				865F51182103B0FD002EBD1E /* RMBScholarBioCell.m */,
+				86F72D9C21112FCF00F7170F /* RMBScholarAvatarCell.h */,
+				86F72D9D21112FCF00F7170F /* RMBScholarAvatarCell.m */,
 			);
 			path = Scholar;
 			sourceTree = "<group>";
@@ -179,8 +214,10 @@
 				86107A8B21022FD700F0C885 /* RMBYouTubePlayerCell.m */,
 				865F511221024924002EBD1E /* RMBVimeoPlayerCell.h */,
 				865F511321024924002EBD1E /* RMBVimeoPlayerCell.m */,
-				86A9A38F2101119000274C26 /* RMBVideoCell.m */,
 				86A9A38E2101119000274C26 /* RMBVideoCell.h */,
+				86A9A38F2101119000274C26 /* RMBVideoCell.m */,
+				86F72D992111222600F7170F /* RMBVideoSeriesCell.h */,
+				86F72D9A2111222600F7170F /* RMBVideoSeriesCell.m */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -220,6 +257,10 @@
 				8678EA3420FFC0EA00FB8E4B /* RMBScholar.m */,
 				8678EA3020FFA10300FB8E4B /* RMBVideo.h */,
 				8678EA3120FFA10300FB8E4B /* RMBVideo.m */,
+				865163CC210CF728000A82E4 /* RMBVideoSeries.h */,
+				865163CD210CF728000A82E4 /* RMBVideoSeries.m */,
+				86F72D93210F9F4600F7170F /* RMBMediaProgress.h */,
+				86F72D94210F9F4600F7170F /* RMBMediaProgress.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -280,6 +321,7 @@
 		86994EF720FBCC31001E4EC5 /* Rememberance */ = {
 			isa = PBXGroup;
 			children = (
+				865163C6210A9838000A82E4 /* fonts */,
 				8678EA3720FFC7EB00FB8E4B /* Cache */,
 				86A9A37D2101081E00274C26 /* Views */,
 				86AF206920FD4D500048F226 /* VIewControllers */,
@@ -323,6 +365,12 @@
 			children = (
 				86A9A3912101127A00274C26 /* HeaderViews */,
 				86A9A37E2101082800274C26 /* TableViewCells */,
+				86F72D9F2112236F00F7170F /* RMBScholarAvatarsView.h */,
+				86F72DA02112236F00F7170F /* RMBScholarAvatarsView.m */,
+				86F72DA22112412100F7170F /* RMBSeriesProgressView.h */,
+				86F72DA32112412100F7170F /* RMBSeriesProgressView.m */,
+				86FCB08D211388DA00D6B072 /* RMBBookmarkView.h */,
+				86FCB08E211388DA00D6B072 /* RMBBookmarkView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -351,8 +399,6 @@
 				86A9A3792101043200274C26 /* Tabs */,
 				86A9A3782101042800274C26 /* Base */,
 				8678EA2520FD7F5400FB8E4B /* Main */,
-				8678EA382100F73E00FB8E4B /* RMBScholarPagerViewController.h */,
-				8678EA392100F73E00FB8E4B /* RMBScholarPagerViewController.m */,
 				86A9A3922101239E00274C26 /* RMBScholarProfileViewController.h */,
 				86A9A3932101239E00274C26 /* RMBScholarProfileViewController.m */,
 				86A9A38521010DD800274C26 /* RMBScholarsViewController.h */,
@@ -361,8 +407,8 @@
 				86A9A38921010DE700274C26 /* RMBVideosViewController.m */,
 				866E1AFD21022BD800DF5A36 /* RMBVideoViewController.h */,
 				866E1AFE21022BD800DF5A36 /* RMBVideoViewController.m */,
-				865F510F21024906002EBD1E /* RMBVimeoVideoViewController.h */,
-				865F511021024906002EBD1E /* RMBVimeoVideoViewController.m */,
+				865163C9210CF690000A82E4 /* RMBVideoSeriesViewController.h */,
+				865163CA210CF690000A82E4 /* RMBVideoSeriesViewController.m */,
 			);
 			path = VIewControllers;
 			sourceTree = "<group>";
@@ -428,6 +474,7 @@
 			files = (
 				86994F0520FBCC33001E4EC5 /* LaunchScreen.storyboard in Resources */,
 				86994F0220FBCC33001E4EC5 /* Assets.xcassets in Resources */,
+				865163C8210A984A000A82E4 /* Cardo104s.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,13 +526,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F72D95210F9F4600F7170F /* RMBMediaProgress.m in Sources */,
 				86994EFD20FBCC31001E4EC5 /* RMBRootViewController.m in Sources */,
+				86F72D9B2111222600F7170F /* RMBVideoSeriesCell.m in Sources */,
+				86FCB08F211388DA00D6B072 /* RMBBookmarkView.m in Sources */,
 				864B4DFC20FD011300CFEACE /* RMBClient.m in Sources */,
 				86A9A38A21010DE700274C26 /* RMBVideosViewController.m in Sources */,
 				86107A8C21022FD700F0C885 /* RMBYouTubePlayerCell.m in Sources */,
 				86A9A3942101239E00274C26 /* RMBScholarProfileViewController.m in Sources */,
 				86A9A39A21012FC600274C26 /* UIView+RMBAdditions.m in Sources */,
-				8678EA3A2100F73E00FB8E4B /* RMBScholarPagerViewController.m in Sources */,
+				86FCB08C2113802F00D6B072 /* RMBResponse.m in Sources */,
 				86A9A38721010DD800274C26 /* RMBScholarsViewController.m in Sources */,
 				865F51192103B0FD002EBD1E /* RMBScholarBioCell.m in Sources */,
 				8693C34520FD21BB00132065 /* RMBUtils.m in Sources */,
@@ -494,16 +544,18 @@
 				8693C34120FD214100132065 /* RMBUser.m in Sources */,
 				86AF207E20FD742A0048F226 /* RMBWorkspaceViewController.m in Sources */,
 				86A9A38D210110C300274C26 /* RMBScholarHeaderView.m in Sources */,
-				865F511121024906002EBD1E /* RMBVimeoVideoViewController.m in Sources */,
 				8678EA3220FFA10300FB8E4B /* RMBVideo.m in Sources */,
 				8693C33E20FD0DFD00132065 /* RMBActiveUser.m in Sources */,
 				8678EA2820FE6E0900FB8E4B /* RMBModel.m in Sources */,
+				86F72D9E21112FCF00F7170F /* RMBScholarAvatarCell.m in Sources */,
 				86A9A3842101087300274C26 /* RMBScholarCell.m in Sources */,
 				8678EA2C20FE703700FB8E4B /* RMBIdentiferTransformer.m in Sources */,
 				86AF207220FD4D9D0048F226 /* RMBMainViewController.m in Sources */,
 				866E1AFF21022BD800DF5A36 /* RMBVideoViewController.m in Sources */,
 				86A9A3902101119000274C26 /* RMBVideoCell.m in Sources */,
+				865163CB210CF690000A82E4 /* RMBVideoSeriesViewController.m in Sources */,
 				86994F0820FBCC33001E4EC5 /* main.m in Sources */,
+				86F72DA42112412100F7170F /* RMBSeriesProgressView.m in Sources */,
 				86994EFA20FBCC31001E4EC5 /* RMBAppDelegate.m in Sources */,
 				865F511421024924002EBD1E /* RMBVimeoPlayerCell.m in Sources */,
 				86AF207B20FD74060048F226 /* RMBDiscoverViewController.m in Sources */,
@@ -511,7 +563,9 @@
 				8678EA2F20FED47E00FB8E4B /* RMBModelCollection.m in Sources */,
 				86AF206F20FD4D8B0048F226 /* RMBUnauthViewController.m in Sources */,
 				865F511C210428D7002EBD1E /* UIColor+RMBAdditions.m in Sources */,
+				86F72DA12112236F00F7170F /* RMBScholarAvatarsView.m in Sources */,
 				86A9A39D2101323D00274C26 /* UINavigationController+RMBAdditions.m in Sources */,
+				865163CE210CF728000A82E4 /* RMBVideoSeries.m in Sources */,
 				86AF206C20FD4D790048F226 /* RMBSplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,12 +700,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2B95TKRHZ2;
 				INFOPLIST_FILE = Rememberance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = twentyforty.Rememberance;
+				PRODUCT_BUNDLE_IDENTIFIER = education.remembrance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -663,12 +719,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2B95TKRHZ2;
 				INFOPLIST_FILE = Rememberance/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = twentyforty.Rememberance;
+				PRODUCT_BUNDLE_IDENTIFIER = education.remembrance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

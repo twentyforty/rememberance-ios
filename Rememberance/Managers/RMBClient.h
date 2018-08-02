@@ -8,11 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
+#import "OVCHTTPSessionManager.h"
 
 typedef void (^RMBClientSuccess)(id responseObject);
 typedef void (^RMBClientFailure)(NSString *failureReason, NSInteger statusCode);
 
-@interface RMBClient : AFHTTPSessionManager
+@interface RMBClient : OVCHTTPSessionManager
 
 @property (strong, nonatomic) NSString *token;
 

@@ -38,11 +38,17 @@
   [self.view addSubview:self.tableView];
   
   self.navigationController.navigationBar.translucent = NO;
+  self.tabBarController.tabBar.translucent = NO;
   
   UIEdgeInsets contentInset = self.tableView.contentInset;
   if (self.tabBarController) {
-    contentInset.bottom = 44;
+//    CGFloat height = self.bottomLayoutGuide.length;
+    contentInset.bottom = self.tabBarController.tabBar.frame.size.height;
+//    contentInset.top = self.navigationController.navigationBar.frame.size.height;
+//    contentInset = UIEdgeInsetsMake(0, 0, height, 0);
   }
+//  self.edgesForExtendedLayout = UIRectEdgeNone;
+  self.tableView.scrollIndicatorInsets = contentInset;
   self.tableView.contentInset = contentInset;
 
   [self loadObjects];
