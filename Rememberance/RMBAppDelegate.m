@@ -11,6 +11,7 @@
 #import "RMBActiveUser.h"
 #import "UIColor+RMBAdditions.h"
 
+
 @interface RMBAppDelegate ()
 
 @property (strong, nonatomic, readwrite) RMBRootViewController *rootViewController;
@@ -21,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.rootViewController = [[RMBRootViewController alloc] init];
+  self.rootViewController = [RMBRootViewController sharedController];
   self.window.rootViewController = self.rootViewController;
   [self.window makeKeyAndVisible];
   
@@ -39,17 +40,26 @@
   
   [UITableView appearance].separatorInset = UIEdgeInsetsZero;
   
-//  [UINavigationBar.appearance setBackIndicatorImage:[UIImage imageNamed:@"back_button"]];
-//
-//  for (NSString* family in [[UIFont familyNames] sortedArrayUsingSelector:@selector(compare:)])
-//  {
-//    NSLog(@"%@", family);
-//
-//    for (NSString* name in [UIFont fontNamesForFamilyName: family])
-//    {
-//      NSLog(@"  %@", name);
-//    }
-//  }
+  [UINavigationBar.appearance setBackIndicatorImage:[UIImage imageNamed:@"back_button"]];
+
+  if(@available(iOS 11, *)) {
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateNormal];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor clearColor]} forState:UIControlStateHighlighted];
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-300, 0) forBarMetrics:UIBarMetricsDefault];
+  } else {
+    [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-300, 0) forBarMetrics:UIBarMetricsDefault];
+  }
+
+  for (NSString* family in [[UIFont familyNames] sortedArrayUsingSelector:@selector(compare:)])
+  {
+    NSLog(@"%@", family);
+
+    for (NSString* name in [UIFont fontNamesForFamilyName: family])
+    {
+      NSLog(@"  %@", name);
+    }
+  }
+  
   return YES;
 }
 

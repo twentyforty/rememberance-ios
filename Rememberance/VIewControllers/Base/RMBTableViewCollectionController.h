@@ -27,4 +27,6 @@
 - (void)loadObjects;
 - (void)addPullToRefresh;
 - (void)addInifiniteScroll;
+- (void)setPlaceholderText:(NSString *)placeholderText;
+
 @end

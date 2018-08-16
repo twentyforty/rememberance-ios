@@ -11,13 +11,17 @@
 #import "RMBUtils.h"
 #import "NSDictionary+MTLManipulationAdditions.h"
 
+@class RMBModelFieldSet;
+
 @interface RMBModel : MTLModel <MTLJSONSerializing>
 
 @property (assign, nonatomic) NSInteger identifier;
 
-- (NSString *)cacheKey;
++ (NSString *)serverModelName;
++ (NSArray <NSString *>*)defaultSummaryPropertyKeys;
++ (NSArray <NSString *>*)detailPropertyKeys;
 
-+ (NSString *)cacheKeyPrefix;
-+ (NSString *)cacheKeyForIdentifier:(NSInteger)identifier;
++ (NSString *)resourcePathFormat;
+- (void)loadDetailsWithSuccess:(RMBCompletion)completion;
 
 @end

@@ -39,20 +39,23 @@ typedef NS_ENUM(NSInteger, RMBScholarCellType) {
 - (instancetype)initWithScholar:(RMBScholar *)scholar {
   if (self = [super init]) {
     _scholar = scholar;
-
-    NSMutableArray *cellTypes = [NSMutableArray array];
-    if (self.scholar.bio) {
-      [cellTypes addObject:@(RMBScholarCellTypeBio)];
-    }
-    if ([self.scholar.videoCount integerValue] > 0) {
-      [cellTypes addObject:@(RMBScholarCellTypeVideos)];
-    }
-    if ([self.scholar.videoSeriesCount integerValue] > 0) {
-      [cellTypes addObject:@(RMBScholarCellTypeVideoSeries)];
-    }
-    _cellTypes = cellTypes;
+    [self setupCellTypes];
   }
   return self;
+}
+
+- (void)setupCellTypes {
+  NSMutableArray *cellTypes = [NSMutableArray array];
+  if (self.scholar.bio) {
+    [cellTypes addObject:@(RMBScholarCellTypeBio)];
+  }
+  if ([self.scholar.videoCount integerValue] > 0) {
+    [cellTypes addObject:@(RMBScholarCellTypeVideos)];
+  }
+  if ([self.scholar.videoSeriesCount integerValue] > 0) {
+    [cellTypes addObject:@(RMBScholarCellTypeVideoSeries)];
+  }
+  _cellTypes = cellTypes;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -73,6 +76,11 @@ typedef NS_ENUM(NSInteger, RMBScholarCellType) {
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  
+  [self.scholar loadDetailsWithSuccess:^{
+    [self setupCellTypes];
+    [self.tableView reloadData];
+  }];
 
   self.tableView = [[UITableView alloc] initWithFrame:self.view.bounds];
   [self.tableView registerClass:[RMBScholarBioCell class] forCellReuseIdentifier:@"bio"];
@@ -95,12 +103,7 @@ typedef NS_ENUM(NSInteger, RMBScholarCellType) {
   if (self.tabBarController) {
     contentInset.bottom = 44;
   }
-//  self.tableView.backgroundColor = [UIColor lightGrayColor];
   self.tableView.contentInset = contentInset;
-//  UIView *footer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.width, self.tableView.height - 200)];
-//  footer.backgroundColor = [UIColor lightGrayColor];
-//  self.tableView.tableFooterView = footer;
-
   [self.tableView addSubview:self.headerView];
 }
 
@@ -143,9 +146,9 @@ typedef NS_ENUM(NSInteger, RMBScholarCellType) {
     if (!self.bioCell.expanded) {
       self.bioCell.expanded = YES;
       self.bioCell.selectionStyle = UITableViewCellSelectionStyleNone;
+      [self.tableView beginUpdates];
+      [self.tableView endUpdates];
     }
-    [self.tableView beginUpdates];
-    [self.tableView endUpdates];
   } else if (cellType == RMBScholarCellTypeVideos) {
     NSString *remotePath = [NSString stringWithFormat:@"scholars/%ld/videos/", self.scholar.identifier];
     RMBVideosViewController *controller = [[RMBVideosViewController alloc] initWithRelativePath:remotePath];

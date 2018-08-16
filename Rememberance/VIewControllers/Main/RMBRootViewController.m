@@ -13,7 +13,7 @@
 #import "RMBUnauthViewController.h"
 #import "RMBMainViewController.h"
 
-@interface RMBRootViewController ()
+@interface RMBRootViewController () <RMBUnauthViewControllerDelegate>
 
 @property (strong, nonatomic) RMBUnauthViewController *unauthViewController;
 @property (strong, nonatomic) RMBMainViewController *mainViewController;
@@ -23,6 +23,16 @@
 @end
 
 @implementation RMBRootViewController
+
+static RMBRootViewController *sharedController = nil;
+
++ (RMBRootViewController *)sharedController {
+  static dispatch_once_t once;
+  dispatch_once(&once, ^{
+    sharedController = [[RMBRootViewController alloc] init];
+  });
+  return sharedController;
+}
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -36,28 +46,23 @@
   [splashViewController didMoveToParentViewController:self];
 
   [RMBActiveUser reloadWithSuccess:^{
-    [self switchToMainViewController];
+    [self userLoggedIn];
   } failure:^(NSString *message) {
-    [self switchToUnauthViewContoller];
+    [[self class] switchToUnauthViewContoller];
   }];
 }
 
-- (void)switchToUnauthViewContoller {
++ (void)switchToUnauthViewContoller {
   RMBUnauthViewController *unauthViewController = [[RMBUnauthViewController alloc] init];
+  unauthViewController.delegate = sharedController;
   UINavigationController *navigationController
       = [[UINavigationController alloc] initWithRootViewController:unauthViewController];
   
-  [self animateFadeTransitionToViewController:navigationController completion:nil];
-//  [self.current willMoveToParentViewController: nil];
-//  [self.current.view removeFromSuperview];
-//  [self.current removeFromParentViewController];
-//
-//  [self addChildViewController:navigationController];
-//  navigationController.view.frame = self.view.bounds;
-//  [self.view addSubview:navigationController.view];
-//  [navigationController didMoveToParentViewController:self];
-//
-//  self.current = navigationController;
+  [sharedController animateFadeTransitionToViewController:navigationController completion:nil];
+}
+
+- (void)userLoggedIn {
+  [self switchToMainViewController];
 }
 
 - (void)switchToMainViewController {

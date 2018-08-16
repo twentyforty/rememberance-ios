@@ -12,6 +12,7 @@
 #import "UIColor+RMBAdditions.h"
 #import "RMBScholarAvatarsView.h"
 #import "RMBBookmarkView.h"
+#import "UIImage+RMBAdditions.h"
 
 @interface RMBVideoCell () <MGSwipeTableCellDelegate>
 
@@ -71,17 +72,17 @@
     
     [self.completedIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
       make.top.equalTo(self.videoImageView);
-      make.right.equalTo(self.contentView).offset(-8);
+      make.right.equalTo(self.contentView).offset(-16);
       make.width.equalTo(@16);
       make.height.equalTo(@16);
     }];
 
-    self.bookmarkImageView = [[RMBBookmarkView alloc] initWithSize:16];
+    self.bookmarkImageView = [[RMBBookmarkView alloc] initWithSize:16 permanent:NO];
     self.bookmarkImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.contentView addSubview:self.bookmarkImageView];
     [self.bookmarkImageView mas_makeConstraints:^(MASConstraintMaker *make) {
       make.top.equalTo(self.completedIndicator.mas_bottom).offset(8);
-      make.right.equalTo(self.contentView).offset(-8);
+      make.right.equalTo(self.contentView).offset(-16);
       make.width.equalTo(@(16));
       make.height.equalTo(@(16));
     }];
@@ -100,6 +101,13 @@
     
     self.scholarAvatarsView = [[RMBScholarAvatarsView alloc] initWithSize:32.0 interItemSpacing:-6.0];
     [self.contentView addSubview:self.scholarAvatarsView];
+    [self.scholarAvatarsView mas_makeConstraints:^(MASConstraintMaker *make) {
+      make.height.equalTo(@32);      
+      make.right.equalTo(self.completedIndicator.mas_left).offset(-8);
+      make.left.equalTo(self.videoImageView.mas_right).offset(8);
+      make.top.greaterThanOrEqualTo(self.videoTitleLabel.mas_bottom).offset(10);
+      make.bottom.equalTo(self.contentView).offset(-8);
+    }];
 
     self.durationBackground = [[UIView alloc] init];
     self.durationBackground.backgroundColor = [UIColor colorWithWhite:0.1 alpha:0.8];
@@ -117,7 +125,9 @@
     }];
     
     //configure right buttons
-    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"star_unhighlighted"] backgroundColor:[UIColor renovatioBackground]];
+    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@""
+                                                      icon:[[UIImage imageNamed:@"star_unhighlighted"] imageTintedWithColor:[UIColor renovatioRed]]
+                                           backgroundColor:[UIColor renovatioBackground]];
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     button.buttonWidth = 44;
     self.rightButtons = @[button];
@@ -134,16 +144,6 @@
   self.completedIndicator.backgroundColor = [self.video.progress.completed boolValue] ? [UIColor renovatioRed] : [UIColor renovatioBackground];
   self.durationLabel.text = self.video.lengthString;
   self.scholarAvatarsView.scholars = self.video.scholars;
-  [self.scholarAvatarsView mas_remakeConstraints:^(MASConstraintMaker *make) {
-    make.height.equalTo(@32);
-    CGFloat width = [RMBScholarAvatarsView widthWithScholars:self.video.scholars
-                                                        size:32.0
-                                            interItemSpacing:-6.0];
-    make.width.equalTo(@(width > 10 ? width : 0));
-    make.right.equalTo(self.completedIndicator.mas_left).offset(-8);
-    make.top.greaterThanOrEqualTo(self.videoTitleLabel.mas_bottom).offset(10);
-    make.bottom.equalTo(self.contentView).offset(-8);
-  }];
   self.bookmarkImageView.bookmarked = [video.bookmarkedByMe boolValue];
 
   [self.videoImageView sd_setImageWithURL:video.imageSmallURL placeholderImage:[UIImage imageNamed:@"gray_placeholder"] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {

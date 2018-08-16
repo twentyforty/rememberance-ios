@@ -17,6 +17,9 @@
 - (instancetype)initWithRelativePath:(NSString *)relativePath {
   RMBModelCollection *collection = [[RMBModelCollection alloc] initWithModelClass:[RMBVideoSeries class]
                                                             andRelativeRemotePath:relativePath];
+  collection.fieldSet = [[RMBModelFieldSet summaryFieldSetForModelClass:[RMBVideoSeries class]]
+                         andFieldSetForPropertyKeys:@[@"imageURL", @"name"] forModelClass:[RMBScholar class]];
+  self.title = @"Video Series";
   return [super initWithCollection:collection];
 }
 

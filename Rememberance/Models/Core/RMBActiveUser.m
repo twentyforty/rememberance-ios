@@ -27,18 +27,45 @@ static RMBActiveUser *sharedUser = nil;
                       success:(RMBCompletion)success
                       failure:(RMBFailure)failure {
   [[RMBClient sharedClient] POST:@"auth/token/"
-                      parameters:@{@"username": username, @"password": password}
-                        progress:nil
-                         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                           NSString *token = responseObject[@"token"];
-                           [[self class] saveTokenToDisk:token];
-                           [[self class] reloadFromServerWithSuccess:nil failure:failure];
-                           if (success) {
-                             success();
-                           }
-                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                        RMBClient.sharedClient.token = nil;
-                        NSLog(@"failure");
+                      parameters:@{@"username": username, @"password": password} completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+                        if (error) {
+                          NSLog(@"failure");
+                          if (failure) {
+                            failure(@"failed");
+                          }
+                        } else {
+                          [self saveTokenToDisk:response.result];
+                          [self reloadFromServerWithSuccess:success failure:failure];
+                        }
+                      }];
+}
+
++ (void)registerWithUsername:(NSString *)username
+                    password:(NSString *)password
+                       email:(NSString *)email
+                     success:(RMBCompletion)success
+                     failure:(RMBFailure)failure {
+  [self saveTokenToDisk:nil];
+  [[RMBClient sharedClient] POST:@"users/register/"
+                      parameters:@{@"username": username, @"password": password, @"email": email}
+                      completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+                        if (error) {
+                          if (failure) {
+                            failure(error.localizedDescription);
+                          }
+                        } else {
+                          if (response.result[@"registered"]) {
+                            [self authorizeWithUsername:username password:password success:success failure:failure];
+                          } else if ([response.result[@"errors"] count] > 0) {
+                            if (failure) {
+                              failure([response.result[@"errors"] componentsJoinedByString:@"\r\n"]);
+                            }
+                          } else {
+                            if (failure) {
+                              failure(@"Unknown failure.");
+                            }
+                          }
+                        }
                       }];
 }
 
@@ -57,6 +84,7 @@ static RMBActiveUser *sharedUser = nil;
       [[self class] reloadFromServerWithSuccess:success failure:failure];
     }
   } else {
+    [self saveTokenToDisk:nil];
     failure(@"first sign in");
   }
 }
@@ -66,6 +94,7 @@ static RMBActiveUser *sharedUser = nil;
                      parameters:nil
                      completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
                        if (error) {
+                         [self saveTokenToDisk:nil];
                          if (failure) {
                            failure(@"failed");
                          }
@@ -101,9 +130,6 @@ static RMBActiveUser *sharedUser = nil;
 
 + (BOOL)loadTokenFromDisk {
   NSString *storedToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"usertoken"];
-//  storedToken = @"afa9596783857941a4ff367f00d445ab1f363610";
-//  storedToken = @"95cca5ea679c8c22e1de51ef621acc729fff0f18";
-  storedToken = @"cdf4b2b8d2cb0120842200ba66cb4ff898b6509a";
   if (storedToken != nil) {
     [RMBClient sharedClient].token = storedToken;
     return YES;
@@ -113,7 +139,17 @@ static RMBActiveUser *sharedUser = nil;
 
 + (void)saveTokenToDisk:(NSString *)token {
   [RMBClient sharedClient].token = token;
-  [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"usertoken"];
+  if (token) {
+    [[NSUserDefaults standardUserDefaults] setObject:token forKey:@"usertoken"];
+  } else {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"usertoken"];
+  }
+}
+
++ (void)logout {
+  [self saveTokenToDisk:nil];
+  [self setActiveUser:nil];
+  [self saveActiveUserToDisk];
 }
 
 @end

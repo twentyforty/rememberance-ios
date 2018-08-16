@@ -14,24 +14,43 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
   return [[super JSONKeyPathsByPropertyKey] mtl_dictionaryByAddingEntriesFromDictionary:
-          @{@"identifier": @"id",
-            @"title": @"title",
+          @{@"title": @"title",
             @"bookmarkedByMe": @"bookmarked_by_me",
             @"videoIndex": @"video_index",
+            @"videoCount": @"video_count",
             @"scholars": @"scholars",
             @"imageURL": @"image_url",
-            @"videoSummaries": @"video_summaries",
+            @"completedVideoIndexes": @"completed_video_indexes",
             @"progressTitle": @"progress_title",
-            @"completed": @"completed"
+            @"videoSeriesDescription": @"description"
             }];
 }
 
-+ (NSValueTransformer *)videoSummariesJSONTransformer {
-   return [MTLJSONAdapter arrayTransformerWithModelClass:[RMBVideo class]];
++ (NSString *)serverModelName {
+  return  @"VideoSeries";
 }
+
++ (NSArray<NSString *> *)defaultSummaryPropertyKeys {
+  return [[super defaultSummaryPropertyKeys] arrayByAddingObjectsFromArray:
+          @[@"title", @"bookmarkedByMe", @"videoIndex", @"videoCount", @"scholarImages", @"imageURL", @"completedVideoIndexes", @"progressTItle"]];
+}
+
++ (NSArray<NSString *> *)detailPropertyKeys {
+  return [[self defaultSummaryPropertyKeys] arrayByAddingObjectsFromArray:
+          @[@"videoSeriesDescription"]];
+}
+
++ (NSString *)resourcePathFormat {
+  return @"videoseries/%ld/";
+}
+
+//+ (NSValueTransformer *)completedVideoIndexesJSONTransformer {
+//  return [NSValueTransformer mtl_arrayMappingTransformerWithTransformer:[NSValueTransformer mtl_numberTransformerWithNumberStyle:NSNumberFormatterOrdinalStyle locale:nil]];
+//}
 
 + (NSValueTransformer *)scholarsJSONTransformer {
   return [MTLJSONAdapter arrayTransformerWithModelClass:[RMBScholar class]];
+//  return [NSValueTransformer mtl_arrayMappingTransformerWithTransformer:[NSValueTransformer valueTransformerForName:MTLURLValueTransformerName]];
 }
 
 + (NSValueTransformer *)imageURLJSONTransformer {

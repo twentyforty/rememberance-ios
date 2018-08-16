@@ -10,6 +10,8 @@
 #import "Mantle.h"
 #import "RMBClient.h"
 #import "RMBMediaProgress.h"
+#import "RMBVideoSeries.h"
+#import "RMBScholar.h"
 
 @implementation RMBVideo
 
@@ -27,8 +29,27 @@
             @"duration": @"duration",
             @"progress": @"progress",
             @"bookmarkedByMe": @"bookmarked_by_me",
-            @"scholars": @"scholars"
+            @"scholars": @"scholars",
+            @"series": @"series",
             }];
+}
+
++ (NSString *)serverModelName {
+  return @"Video";
+}
+
++ (NSArray<NSString *> *)defaultSummaryPropertyKeys {
+  return [[super defaultSummaryPropertyKeys] arrayByAddingObjectsFromArray:
+          @[@"title", @"url", @"youtubeId", @"imageSmallURL", @"imageMediumURL", @"aspectRatio", @"duration", @"progress", @"bookmarkedByMe", @"scholars"]];
+}
+
++ (NSArray<NSString *> *)detailPropertyKeys {
+  return [[self defaultSummaryPropertyKeys] arrayByAddingObjectsFromArray:
+          @[@"videoDescription", @"imageLargeURL", @"series"]];
+}
+
++ (NSString *)resourcePathFormat {
+  return @"videos/%ld/";
 }
 
 + (NSValueTransformer *)urlJSONTransformer {
@@ -53,6 +74,10 @@
 
 + (NSValueTransformer *)scholarsJSONTransformer {
   return [MTLJSONAdapter arrayTransformerWithModelClass:[RMBScholar class]];
+}
+
++ (NSValueTransformer *)seriesJSONTransformer {
+  return [MTLJSONAdapter dictionaryTransformerWithModelClass:[RMBVideoSeries class]];
 }
 
 - (RMBVideoProgressState)state {

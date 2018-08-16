@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@protocol RMBUnauthViewControllerDelegate
+
+- (void)userLoggedIn;
+
+@end
+
 @interface RMBUnauthViewController : UIViewController
+
+@property (weak, nonatomic, readwrite) id<RMBUnauthViewControllerDelegate> delegate;
 
 @end

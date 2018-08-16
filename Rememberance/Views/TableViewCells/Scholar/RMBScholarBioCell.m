@@ -22,7 +22,6 @@
   if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
     self.bioLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.bioLabel.font = [UIFont systemFontOfSize:14];
-//    self.bioLabel.font = [UIFont fontWithName:@"Cardo" size:14];
     self.bioLabel.lineBreakMode = NSLineBreakByWordWrapping;
     self.bioLabel.numberOfLines = 0;
     [self.contentView addSubview:self.bioLabel];

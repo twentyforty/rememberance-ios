@@ -313,22 +313,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/Main/RMBRootViewController.m"
-            timestampString = "553710808.477669"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/RMBActiveUser.m"
             timestampString = "553627502.707443"
             startingColumnNumber = "9223372036854775807"
@@ -346,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Main/RMBRootViewController.m"
-            timestampString = "553710808.477797"
+            timestampString = "555890662.060344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -362,11 +346,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.804499"
+            timestampString = "556142135.756322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-loadObjectsWithSuccess:failure:"
             landmarkType = "7">
          </BreakpointContent>
@@ -378,23 +362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.804602"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-initWithModelClass:andRelativeRemotePath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.8046629"
+            timestampString = "556142135.756384"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -409,13 +377,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/Main/RMBRootViewController.m"
-            timestampString = "553710808.478174"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.756429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "-switchToUnauthViewContoller"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-initWithModelClass:andRelativeRemotePath:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -426,11 +394,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Main/RMBRootViewController.m"
-            timestampString = "553710808.478219"
+            timestampString = "555890662.0606461"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "+switchToUnauthViewContoller"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/Main/RMBRootViewController.m"
+            timestampString = "555890662.060708"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
             landmarkName = "-switchToMainViewController"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,11 +426,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.804764"
+            timestampString = "556142135.756507"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "-parseNextParameterFromResponseObject:"
             landmarkType = "7">
          </BreakpointContent>
@@ -454,15 +438,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.804819"
+            timestampString = "556142135.756551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "-parseNextParameterFromResponseObject:"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,7 +506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/SVPullToRefresh/SVPullToRefresh/UIScrollView+SVPullToRefresh.m"
-            timestampString = "553714518.701677"
+            timestampString = "556079684.92847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "443"
@@ -538,11 +522,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.186744"
+            timestampString = "556142135.75666"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "-loadObjects"
             landmarkType = "7">
          </BreakpointContent>
@@ -554,11 +538,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.186805"
+            timestampString = "556142135.756713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "-loadObjects"
             landmarkType = "7">
          </BreakpointContent>
@@ -570,11 +554,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.1868531"
+            timestampString = "556142135.756763"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "-loadNextObjects"
             landmarkType = "7">
             <Locations>
@@ -633,11 +617,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.186897"
+            timestampString = "556142135.756812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
             landmarkName = "-loadNextObjects"
             landmarkType = "7">
          </BreakpointContent>
@@ -649,28 +633,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.186939"
+            timestampString = "556142135.756862"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "-loadNextObjects"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.186981"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -681,11 +649,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBScholarProfileViewController.m"
-            timestampString = "554858627.9908839"
+            timestampString = "556142135.756915"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -697,11 +665,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/HeaderViews/RMBScholarHeaderView.m"
-            timestampString = "554843529.912979"
+            timestampString = "556142135.756952"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "-setScholar:"
             landmarkType = "7">
          </BreakpointContent>
@@ -713,11 +681,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/HeaderViews/RMBScholarHeaderView.m"
-            timestampString = "554843529.9130239"
+            timestampString = "556142135.756986"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "-setScholar:"
             landmarkType = "7">
          </BreakpointContent>
@@ -729,11 +697,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.187097"
+            timestampString = "556142135.757019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
             landmarkName = "-loadObjects"
             landmarkType = "7">
             <Locations>
@@ -838,11 +806,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/Core/RMBVideo.m"
-            timestampString = "554922746.1871639"
+            timestampString = "555280573.997333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "+JSONKeyPathsByPropertyKey"
             landmarkType = "7">
          </BreakpointContent>
@@ -854,7 +822,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Mantle/Mantle/MTLJSONAdapter.m"
-            timestampString = "554670073.610007"
+            timestampString = "555115495.541325"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "178"
@@ -902,7 +870,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Mantle/Mantle/MTLJSONAdapter.m"
-            timestampString = "554670073.610054"
+            timestampString = "555115495.541364"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "170"
@@ -918,7 +886,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pods/Mantle/Mantle/MTLJSONAdapter.m"
-            timestampString = "554670073.610108"
+            timestampString = "555115495.5414"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "293"
@@ -949,44 +917,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
-            timestampString = "554922746.18727"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/RMBScholarProfileViewController.m"
-            timestampString = "554858627.991209"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/TableViewCells/Scholar/RMBScholarBioCell.m"
-            timestampString = "554504762.043485"
+            timestampString = "556069372.229322"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "-updateConstraints"
             landmarkType = "7">
             <Locations>
@@ -1045,11 +981,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/TableViewCells/Scholar/RMBScholarBioCell.m"
-            timestampString = "554504762.0435309"
+            timestampString = "556069372.2293659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "-updateConstraints"
             landmarkType = "7">
          </BreakpointContent>
@@ -1061,11 +997,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/TableViewCells/Video/RMBVideoCell.m"
-            timestampString = "554939264.805189"
+            timestampString = "556142135.7572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-initWithStyle:reuseIdentifier:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1077,11 +1013,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
-            timestampString = "554864115.041279"
+            timestampString = "556143670.4160039"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "-playerView:didChangeToState:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1093,43 +1029,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
-            timestampString = "554864115.041417"
+            timestampString = "556143670.416073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "-playerView:didChangeToState:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
-            timestampString = "554864115.041478"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "-playerView:didChangeToState:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
-            timestampString = "554864115.0415291"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
             landmarkName = "-viewWillDisappear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1141,11 +1045,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
-            timestampString = "554864115.04158"
+            timestampString = "556143670.416118"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "-updateUserProgress"
             landmarkType = "7">
          </BreakpointContent>
@@ -1156,44 +1060,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
-            timestampString = "554939264.805312"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "+loadTokenFromDisk"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
-            timestampString = "554939264.805359"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "+authorizeWithUsername:password:success:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Rememberance/Managers/RMBClient.m"
-            timestampString = "554939264.805403"
+            timestampString = "556142135.757387"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "+sharedClient"
             landmarkType = "7">
          </BreakpointContent>
@@ -1205,11 +1077,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Managers/RMBClient.m"
-            timestampString = "554939264.805454"
+            timestampString = "556142135.757424"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "+sharedClient"
             landmarkType = "7">
          </BreakpointContent>
@@ -1221,28 +1093,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Managers/RMBClient.m"
-            timestampString = "554939264.805501"
+            timestampString = "556142135.757459"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
             landmarkName = "+sharedClient"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
-            timestampString = "554939264.805549"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "+loadTokenFromDisk"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1253,11 +1109,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBScholarProfileViewController.m"
-            timestampString = "554858627.991781"
+            timestampString = "556142135.757496"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "-tableView:numberOfRowsInSection:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1269,11 +1125,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBScholarProfileViewController.m"
-            timestampString = "554858627.991823"
+            timestampString = "556142135.757531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1285,11 +1141,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBScholarProfileViewController.m"
-            timestampString = "554858627.991864"
+            timestampString = "556142135.757565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-cellTypeAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1317,7 +1173,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideoSeriesViewController.m"
-            timestampString = "554858627.991928"
+            timestampString = "556142135.757621"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-renderCell:forModel:atIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoSeriesViewController.m"
+            timestampString = "556142135.7576571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -1332,44 +1204,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/RMBVideoSeriesViewController.m"
-            timestampString = "554858627.9919749"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "-renderCell:forModel:atIndexPath:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideosViewController.m"
-            timestampString = "554860937.4837691"
+            timestampString = "556142135.7576931"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-viewDidLoad"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/VIewControllers/RMBVideosViewController.m"
-            timestampString = "554860937.483811"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "-renderCell:forModel:atIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1381,11 +1221,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/Core/RMBVideo.m"
-            timestampString = "554922746.187764"
+            timestampString = "555280573.999506"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "+progressJSONTransformer"
             landmarkType = "7">
          </BreakpointContent>
@@ -1397,11 +1237,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/Core/RMBVideoSeries.m"
-            timestampString = "554922746.1878099"
+            timestampString = "555890662.062657"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "+scholarsJSONTransformer"
             landmarkType = "7">
          </BreakpointContent>
@@ -1413,27 +1253,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Models/Core/RMBVideoSeries.m"
-            timestampString = "554922746.1881"
+            timestampString = "555890662.062734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "+videoSummariesJSONTransformer"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/Core/RMBVideoSeries.m"
-            timestampString = "554922746.188306"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "+scholarsJSONTransformer"
             landmarkType = "7">
          </BreakpointContent>
@@ -1445,11 +1269,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
-            timestampString = "554864115.042643"
+            timestampString = "556143670.416317"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1461,11 +1285,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/VIewControllers/RMBVideosViewController.m"
-            timestampString = "554860937.4841011"
+            timestampString = "556142135.757827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "-viewDidAppear:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1508,76 +1332,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.805794"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "-loadObjectsWithSuccess:failure:"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__53-[RMBModelCollection loadObjectsWithSuccess:failure:]_block_invoke"
-                  moduleName = "Rememberance"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/Models/RMBModelCollection.m"
-                  timestampString = "554926352.056667"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "323">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_"
-                  moduleName = "Rememberance"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/Models/RMBModelCollection.m"
-                  timestampString = "554926352.058864"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Rememberance/Models/RMBModelCollection.m"
-            timestampString = "554939264.8058439"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "-loadObjectsWithSuccess:failure:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Rememberance/Managers/RMBClient.m"
-            timestampString = "554939264.805891"
+            timestampString = "556142135.757897"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "+modelClassesByResourcePath"
             landmarkType = "7">
          </BreakpointContent>
@@ -1653,11 +1413,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/RMBBookmarkView.m"
-            timestampString = "554939264.805999"
+            timestampString = "556142930.7771879"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "-setBookmarked:animated:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1669,11 +1429,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/TableViewCells/Video/RMBVideoSeriesCell.m"
-            timestampString = "554939264.8060499"
+            timestampString = "556142135.758045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-swipeTableCellWillEndSwiping:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1685,11 +1445,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/TableViewCells/Scholar/RMBScholarCell.m"
-            timestampString = "554939264.806098"
+            timestampString = "556142135.7580841"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "-swipeTableCellWillEndSwiping:"
             landmarkType = "7">
          </BreakpointContent>
@@ -1701,12 +1461,683 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rememberance/Views/TableViewCells/Scholar/RMBScholarCell.m"
-            timestampString = "554939264.8064491"
+            timestampString = "556142135.758118"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "-swipeTableCellWillEndSwiping:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Views/RMBBookmarkView.m"
+            timestampString = "556142930.777265"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-setBookmarked:animated:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.416512"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "-videoTapped"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.416558"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
+            landmarkName = "-prefersStatusBarHidden"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.758288"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-parametersForRequest"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBVideo.m"
+            timestampString = "555280574.000622"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "+defaultSummaryPropertyKeys"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.416625"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RMBVideoViewController viewDidLoad]"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/VIewControllers/RMBVideoViewController.m"
+                  timestampString = "555112616.905684"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__37-[RMBVideoViewController viewDidLoad]_block_invoke"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/VIewControllers/RMBVideoViewController.m"
+                  timestampString = "555112616.909243"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__destroy_helper_block_"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/VIewControllers/RMBVideoViewController.m"
+                  timestampString = "555112616.911509"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModel.m"
+            timestampString = "556143670.4166681"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "-loadDetailsWithSuccess:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.4167089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "80"
             endingLineNumber = "80"
-            landmarkName = "-swipeTableCellWillEndSwiping:"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.41675"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBScholarProfileViewController.m"
+            timestampString = "556142135.758543"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Views/TableViewCells/Video/RMBVideoSeriesCell.m"
+            timestampString = "556142135.758582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
+            landmarkName = "-setVideoSeries:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RMBVideoSeriesCell setVideoSeries:]"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/Views/TableViewCells/Video/RMBVideoSeriesCell.m"
+                  timestampString = "555125785.6277339"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "526">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RMBVideoSeriesCell setVideoSeries:]"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/Views/TableViewCells/Video/RMBVideoSeriesCell.m"
+                  timestampString = "555125785.629845"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "114"
+                  endingLineNumber = "114"
+                  offsetFromSymbolStart = "534">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBScholar.m"
+            timestampString = "555280574.0009741"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "+imageURLJSONTransformer"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.416832"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
+            timestampString = "556142135.758697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "+reloadWithSuccess:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
+            timestampString = "556142135.758738"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "+reloadFromServerWithSuccess:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
+            timestampString = "556142135.758774"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "+authorizeWithUsername:password:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
+            timestampString = "556142135.758809"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "+authorizeWithUsername:password:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/Main/RMBUnauthViewController.m"
+            timestampString = "556143670.416925"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-loginButtonPressed"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Managers/RMBClient.m"
+            timestampString = "556142135.7592371"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "-setToken:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.4169821"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "-updateUserProgress"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.759333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-loadObjectsWithSuccess:failure:reload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.759379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "-loadObjectsWithSuccess:failure:reload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/Main/RMBUnauthViewController.m"
+            timestampString = "556143670.4170491"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "-signupButtonPressed"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.417091"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/RMBVideoViewController.m"
+            timestampString = "556143670.4171309"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Views/TableViewCells/Video/RMBVideoInfoCell.m"
+            timestampString = "556142135.759822"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-updateConstraints"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.7598619"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-loadObjectsWithSuccess:failure:reload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.759903"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "-loadObjectsWithSuccess:failure:reload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.759943"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "-loadObjectsWithSuccess:failure:reload:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
+            timestampString = "556142135.759984"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
+            landmarkName = "-addInifiniteScroll"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
+            timestampString = "556142135.7600271"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "-loadNextObjects"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
+            timestampString = "556142135.760064"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "-addInifiniteScroll"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__54-[RMBTableViewCollectionController addInifiniteScroll]_block_invoke"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
+                  timestampString = "556079464.130314"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "101"
+                  endingLineNumber = "101"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__copy_helper_block_.119"
+                  moduleName = "Rememberance"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alyibrahim/projects/Rememberance/Rememberance/VIewControllers/Base/RMBTableViewCollectionController.m"
+                  timestampString = "556079464.132447"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
+            timestampString = "556142135.760101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "+registerWithUsername:password:email:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/Core/RMBActiveUser.m"
+            timestampString = "556142135.760139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "+registerWithUsername:password:email:success:failure:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rememberance/Models/RMBModelCollection.m"
+            timestampString = "556142135.760174"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "-loadObjectsWithSuccess:failure:reload:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

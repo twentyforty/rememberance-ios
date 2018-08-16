@@ -10,17 +10,19 @@
 #import "RMBModel.h"
 #import "RMBVideo.h"
 #import "RMBScholar.h"
+#import "RMBMediaProgress.h"
 
 @interface RMBVideoSeries : RMBModel
 
 @property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *videoSeriesDescription;
 @property (copy, nonatomic) NSString *progressTitle;
 @property (copy, nonatomic) NSNumber *bookmarkedByMe;
 @property (copy, nonatomic) NSNumber *videoIndex;
+@property (copy, nonatomic) NSNumber *videoCount;
 @property (strong, nonatomic) NSArray<RMBScholar *> *scholars;
-@property (strong, nonatomic) NSArray<RMBVideo *> *videoSummaries;
+@property (strong, nonatomic) NSArray<NSNumber *> *completedVideoIndexes;
 @property (strong, nonatomic) NSURL *imageURL;
-@property (copy, nonatomic) NSNumber *completed;
 
 - (void)bookmark;
 - (void)unbookmark;

@@ -11,21 +11,20 @@
 #import "RMBVideoCell.h"
 #import "RMBVideoViewController.h"
 #import "GSKStretchyHeaderView.h"
+#import "RMBScholar.h"
 
 @implementation RMBVideosViewController
 
 - (instancetype)initWithRelativePath:(NSString *)relativePath {
   RMBModelCollection *collection = [[RMBModelCollection alloc] initWithModelClass:[RMBVideo class]
                                                             andRelativeRemotePath:relativePath];
+  collection.fieldSet = [[RMBModelFieldSet summaryFieldSetForModelClass:[RMBVideo class]]
+                         andFieldSetForPropertyKeys:@[@"imageURL", @"name"] forModelClass:[RMBScholar class]];
   return [super initWithCollection:collection];
 }
 
-- (void)viewDidLoad {
-  [super viewDidLoad];
-//  [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-}
-
 - (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
   [self.tableView reloadData];
 }
 
@@ -44,7 +43,10 @@
   [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
   RMBVideo *video = [self modelAtIndexPath:indexPath];
   RMBVideoViewController *videoController = [[RMBVideoViewController alloc] initWithVideo:video];
+//  videoController.modalPresentationStyle = UIModalPresentationOverFullScreen;
+  
   [self.navigationController pushViewController:videoController animated:YES];
+//  [self.navigationController pushViewController:videoController animated:YES];
 }
 
 @end

@@ -10,9 +10,9 @@
 
 @interface RMBRootViewController : UIViewController
 
-- (void)switchToUnauthViewContoller;
++ (RMBRootViewController *)sharedController;
 
-- (void)switchToMainViewController;
++ (void)switchToUnauthViewContoller;
 
 @end
 

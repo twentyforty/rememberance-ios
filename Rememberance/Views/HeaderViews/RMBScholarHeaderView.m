@@ -13,6 +13,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UIColor+RMBAdditions.h"
 #import "RMBBookmarkView.h"
+#import "UIImage+RMBAdditions.h"
 
 static const CGSize kUserImageSize = {.width = 100, .height = 100};
 
@@ -24,6 +25,7 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
 @property (nonatomic) UIImageView *navBarImageView;
 @property (nonatomic) UILabel *navBarTitle;
 @property (nonatomic) UIButton *backButton;
+@property (nonatomic) RMBBookmarkView *bookmarkView;
 
 @end
 
@@ -46,6 +48,7 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
   [self.navBarImageView sd_setImageWithURL:scholar.imageURL];
   self.scholarNameLabel.text = scholar.name;
   self.navBarTitle.text = scholar.name;
+  self.bookmarkView.bookmarked = [scholar.bookmarkedByMe boolValue];
 }
 
 - (void)setupViews {
@@ -78,8 +81,9 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
   [self.contentView addSubview:self.scholarNameLabel];
   
   self.backButton = [[UIButton alloc] init];
-  self.backButton.imageView.contentMode = UIViewContentModeCenter;
-  [self.backButton setImage:[UIImage imageNamed:@"back_button"] forState:UIControlStateNormal];
+  self.backButton.imageView.contentMode = UIViewContentModeScaleAspectFill;
+  [self.backButton setImage:[[UIImage imageNamed:@"back_button"] imageTintedWithColor:[UIColor renovatioRed]]
+                   forState:UIControlStateNormal];
   [self.backButton addTarget:self
                       action:@selector(didTapBackButton:)
             forControlEvents:UIControlEventTouchUpInside];
@@ -90,6 +94,11 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
   self.navBarTitle.textColor = [UIColor renovatioRed];
   self.navBarTitle.font = [UIFont systemFontOfSize:17 weight:UIFontWeightSemibold];
   [self.contentView addSubview:self.navBarTitle];
+
+  self.bookmarkView = [[RMBBookmarkView alloc] initWithSize:24 permanent:YES];
+  [self.contentView addSubview:self.bookmarkView];
+   
+  [self.bookmarkView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bookmarkViewTapped)]];
 }
 
 - (void)setupViewConstraints {
@@ -113,10 +122,10 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
   }];
   
   [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.width.equalTo(@14);
-    make.height.equalTo(@22);
+    make.width.equalTo(@26);
+    make.height.equalTo(@26);
     make.top.equalTo(self.contentView).offset(30);
-    make.left.equalTo(self.contentView).offset(8);
+    make.left.equalTo(self.contentView).offset(4);
   }];
   
   [self.navBarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -131,6 +140,13 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
     make.right.equalTo(self.contentView.mas_right).offset(-4);
     make.centerY.equalTo(self.contentView).offset(10);
   }];
+
+  [self.bookmarkView mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.top.equalTo(self.contentView).offset(30);
+    make.right.equalTo(self.contentView).offset(-16);
+    make.width.equalTo(@(24));
+    make.height.equalTo(@(24));
+  }];
 }
 
 - (void)didChangeStretchFactor:(CGFloat)stretchFactor {
@@ -144,20 +160,28 @@ static const CGSize kUserImageSize = {.width = 100, .height = 100};
   }
   
   alpha = MAX(0, alpha);
-//  self.backgroundImageView.alpha = blurAlpha;
-//  self.blurredBackgroundImageView.alpha = blurAlpha;
   self.scholarImageView.alpha = alpha;
   self.scholarNameLabel.alpha = alpha;
-//  self.followButton.alpha = alpha;
   self.navBarTitle.alpha = navBarAlpha;
   self.navBarImageView.alpha = navBarAlpha;
-//  self.backButton.alpha = navBarAlpha;
 }
 
 - (void)didTapBackButton:(id)sender {
   if ([self.delegate respondsToSelector:@selector(backButtonPressed)]) {
     [self.delegate backButtonPressed];
   }
+}
+
+- (void)bookmarkViewTapped {
+  if ([self.delegate respondsToSelector:@selector(bookmarkViewPressed)]) {
+    [self.delegate bookmarkViewPressed];
+  }
+  if ([self.scholar.bookmarkedByMe boolValue]) {
+    [self.scholar unbookmark];
+  } else {
+    [self.scholar bookmark];
+  }
+  [self.bookmarkView setBookmarked:[self.scholar.bookmarkedByMe boolValue] animated:YES];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RMBModel.h"
+#import "RMBModelFieldSet.h"
 
 //@protocol RMBModelCollectionDelegate
 //
@@ -19,6 +20,8 @@
 
 //@property (weak, nonatomic) id<RMBModelCollectionDelegate> delegate;
 @property (strong, nonatomic) NSDictionary *additionalParameters;
+@property (strong, nonatomic) RMBModelFieldSet *fieldSet;
+@property (assign, nonatomic) BOOL loading;
 
 - (instancetype)initWithModelClass:(Class)modelClass
              andRelativeRemotePath:(NSString *)relativeRemotePath;

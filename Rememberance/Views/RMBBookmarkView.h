@@ -12,7 +12,7 @@
 
 @property (assign, nonatomic, readwrite) BOOL bookmarked;
 
-- (instancetype)initWithSize:(CGFloat)size;
+- (instancetype)initWithSize:(CGFloat)size permanent:(BOOL)permanent;
 - (void)setBookmarked:(BOOL)bookmarked animated:(BOOL)animated;
 
 @end

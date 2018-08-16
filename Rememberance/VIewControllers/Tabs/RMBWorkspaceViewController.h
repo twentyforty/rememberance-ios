@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RMBWorkspaceViewController : UIViewController
+#import "RMBTableViewCollectionController.h"
+
+@interface RMBWorkspaceViewController : RMBTableViewCollectionController
 
 @end

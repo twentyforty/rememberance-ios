@@ -8,21 +8,31 @@
 
 #import "RMBBookmarkView.h"
 #import "UIView+RMBAdditions.h"
+#import "UIColor+RMBAdditions.h"
+#import "UIImage+RMBAdditions.h"
+
 @interface RMBBookmarkView ()
 
 @property (strong, nonatomic, readwrite) UIImageView *imageView;
 @property (assign, nonatomic, readwrite) CGFloat size;
+@property (assign, nonatomic, readwrite) BOOL permanent;
+@property (strong, nonatomic, readwrite) UIImage *highlightedImage;
+@property (strong, nonatomic, readwrite) UIImage *unhighlightedImage;
 
 @end
 
 @implementation RMBBookmarkView
 
-- (instancetype)initWithSize:(CGFloat)size {
+- (instancetype)initWithSize:(CGFloat)size permanent:(BOOL)permanent {
   if (self = [super initWithFrame:CGRectMake(0, 0, size, size)]) {
     _size = size;
-    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"star_unhighlighted"]];
+    UIImage *bookmarkImage = [UIImage imageNamed:@"star_unhighlighted"];
+    _highlightedImage = [bookmarkImage imageTintedWithColor:[UIColor renovatioRed]];
+    _unhighlightedImage = [bookmarkImage imageTintedWithColor:[UIColor lightGrayColor]];
+    _imageView = [[UIImageView alloc] initWithImage:_unhighlightedImage];
     _imageView.frame = CGRectMake(0, 0, size, size);
-    _imageView.hidden = YES;
+    _permanent = permanent;
+//    _imageView.hidden = !permanent;
     [self addSubview:_imageView];
   }
   return self;
@@ -39,16 +49,26 @@
   
   CGSize hiddenSize = CGSizeMake(0, 0);
   CGSize expandedSize = CGSizeMake(self.size * 1.2, self.size * 1.2);
-  CGSize finalSize = CGSizeMake(self.size, self.size);
+  CGSize fullSize = CGSizeMake(self.size, self.size);
+  CGSize finalSize;
   
+  if (self.permanent || bookmarked) {
+    finalSize = fullSize;
+  } else {
+    finalSize = hiddenSize;
+  }
+
   if (!animated) {
-    self.imageView.size = bookmarked ? finalSize : hiddenSize;
+    self.imageView.size = finalSize;
     self.imageView.center = center;
+    if (bookmarked) {
+      self.imageView.image = self.highlightedImage;
+    } else {
+      self.imageView.image = self.unhighlightedImage;
+    }
     return;
   }
   if (bookmarked) {
-    self.imageView.size = hiddenSize;
-    self.imageView.center = center;
     [UIView animateWithDuration:initialDuration animations:^{
       self.imageView.size = expandedSize;
       self.imageView.center = center;
@@ -56,18 +76,18 @@
       [UIView animateWithDuration:finalDuration animations:^{
         self.imageView.size = finalSize;
         self.imageView.center = center;
+        self.imageView.image = self.highlightedImage;
       }];
     }];
   } else {
-    self.imageView.size = finalSize;
-    self.imageView.center = center;
-    [UIView animateWithDuration:finalDuration animations:^{
+    [UIView animateWithDuration:initialDuration animations:^{
       self.imageView.size = expandedSize;
       self.imageView.center = center;
     } completion:^(BOOL finished) {
-      [UIView animateWithDuration:initialDuration animations:^{
-        self.imageView.size = hiddenSize;
+      [UIView animateWithDuration:finalDuration animations:^{
+        self.imageView.size = finalSize;
         self.imageView.center = center;
+        self.imageView.image = self.unhighlightedImage;
       }];
     }];
   }

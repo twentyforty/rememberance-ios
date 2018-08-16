@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RMBTableViewCollectionController.h"
 
-@interface RMBHomeViewController : UIViewController
+@interface RMBHomeViewController : RMBTableViewCollectionController
 
 @end

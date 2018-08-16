@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "RMBModel.h"
 #import "RMBMediaProgress.h"
-#import "RMBScholar.h"
+//#import "RMBScholar.h"
+
+@class RMBVideoSeries;
+@class RMBScholar;
 
 typedef NS_ENUM(NSInteger, RMBVideoProgressState) {
   RMBVideoProgressStateNotStarted,
@@ -30,7 +33,8 @@ typedef NS_ENUM(NSInteger, RMBVideoProgressState) {
 @property (copy, nonatomic) NSNumber *duration;
 @property (copy, nonatomic) RMBMediaProgress *progress;
 @property (copy, nonatomic) NSNumber *bookmarkedByMe;
-@property (strong, nonatomic) NSArray *scholars;
+@property (strong, nonatomic) NSArray<RMBScholar *> *scholars;
+@property (strong, nonatomic) RMBVideoSeries *series;
 
 @property (assign, nonatomic) RMBVideoProgressState state;
 @property (assign, nonatomic) float progressPercentage;

@@ -26,6 +26,24 @@
             }];
 }
 
++ (NSString *)serverModelName {
+  return @"Scholar";
+}
+
++ (NSString *)resourcePathFormat {
+  return @"scholars/%ld/";
+}
+
++ (NSArray<NSString *> *)defaultSummaryPropertyKeys {
+  return [[super defaultSummaryPropertyKeys] arrayByAddingObjectsFromArray:
+          @[@"name", @"imageURL", @"bookmarkedByMe"]];
+}
+
++ (NSArray<NSString *> *)detailPropertyKeys {
+  return [[self defaultSummaryPropertyKeys] arrayByAddingObjectsFromArray:
+          @[@"bio", @"videoCount", @"videoSeriesCount"]];
+}
+
 + (NSValueTransformer *)imageURLJSONTransformer {
   return [NSValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }

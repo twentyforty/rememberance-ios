@@ -8,6 +8,6 @@
 
 #import "OVCResponse.h"
 
-@interface RMBResponse : OVCResponse
+@interface RMBListResponse : OVCResponse
 
 @end

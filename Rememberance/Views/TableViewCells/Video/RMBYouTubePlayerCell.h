@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic, readwrite) RMBVideo *video;
 @property (strong, nonatomic, readonly) YTPlayerView *player;
+@property (strong, nonatomic, readonly) UIView *dimView;
 
 - (void)onVideoReady;
 

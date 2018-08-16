@@ -19,6 +19,14 @@
                       success:(RMBCompletion)success
                       failure:(RMBFailure)failure;
 
++ (void)registerWithUsername:(NSString *)username
+                    password:(NSString *)password
+                       email:(NSString *)email
+                     success:(RMBCompletion)success
+                     failure:(RMBFailure)failure;
+
 + (void)reloadWithSuccess:(RMBCompletion)success failure:(RMBFailure)failure;
+
++ (void)logout;
 
 @end

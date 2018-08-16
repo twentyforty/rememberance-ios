@@ -13,6 +13,7 @@
 #import "UIView+RMBAdditions.h"
 #import "Masonry.h"
 #import "RMBBookmarkView.h"
+#import "UIImage+RMBAdditions.h"
 
 @interface RMBScholarCell () <MGSwipeTableCellDelegate>
 
@@ -51,16 +52,17 @@
       make.centerY.equalTo(self.contentView);
     }];
     
-    self.bookmarkView = [[RMBBookmarkView alloc] initWithSize:16];
+    self.bookmarkView = [[RMBBookmarkView alloc] initWithSize:16 permanent:NO];
     [self.contentView addSubview:self.bookmarkView];
     [self.bookmarkView mas_makeConstraints:^(MASConstraintMaker *make) {
       make.centerY.equalTo(self.contentView);
-      make.right.equalTo(self.contentView).offset(-8);
+      make.right.equalTo(self.contentView).offset(-16);
       make.width.equalTo(@(16));
       make.height.equalTo(@(16));
     }];
     
-    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"star_unhighlighted"] backgroundColor:[UIColor renovatioBackground]];
+    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@"" icon:[[UIImage imageNamed:@"star_unhighlighted"] imageTintedWithColor:[UIColor renovatioRed]]
+                                           backgroundColor:[UIColor renovatioBackground]];
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     button.buttonWidth = 44;
     self.rightButtons = @[button];

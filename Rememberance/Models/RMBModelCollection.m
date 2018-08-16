@@ -17,7 +17,6 @@
 @property (assign, nonatomic) Class modelClass;
 @property (copy, nonatomic) NSString *limit;
 @property (copy, nonatomic) NSString *offset;
-@property (strong, nonatomic) NSURLSessionDataTask *currentTask;
 
 @end
 
@@ -43,31 +42,33 @@
 }
 
 - (void)loadObjectsWithSuccess:(RMBCompletion)success failure:(RMBFailure)failure {
-  self.currentTask = [[RMBClient sharedClient] GET:self.relativeRemotePath parameters:[self parametersForRequest] completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
-    if (error) {
-      failure(@"error");
-    }
-    [self.objects addObjectsFromArray:response.result];
-//    if (self.currentTask == response.) {
-      [self parseNextParameterFromResponseObject:response.rawResult];
-    success();
-//      [self deserializeResults:responseObject completion:success];
-//    }
-  }];
-//  self.currentTask =
-//      [[RMBClient sharedClient] GET:self.relativeRemotePath
-//                         parameters:[self parametersForRequest]
-//                           progress:nil
-//                            success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//                              if (self.currentTask == task) {
-//                                [self parseNextParameterFromResponseObject:responseObject];
-//                                [self deserializeResults:responseObject completion:success];
-//                              }
-//                            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//                              if (failure) {
-//                                failure(@"error");
-//                              }
-//                            }];
+  self.offset = nil;
+  [self loadObjectsWithSuccess:success failure:failure reload:YES];
+}
+
+- (void)loadObjectsWithSuccess:(RMBCompletion)success failure:(RMBFailure)failure reload:(BOOL)reload {
+  if (self.loading) {
+    return;
+  }
+  self.loading = YES;
+  NSDictionary *paramters = [self parametersForRequest];
+  [[RMBClient sharedClient] GET:self.relativeRemotePath
+                     parameters:paramters
+                     completion:^(OVCResponse * _Nullable response, NSError * _Nullable error) {
+                       self.loading = NO;
+                       if (error) {
+                         failure(@"error");
+                       } else {
+                         if (reload) {
+                           [self.objects removeAllObjects];
+                         }
+                         [self.objects addObjectsFromArray:response.result];
+                         [self parseNextParameterFromResponseObject:response.rawResult];
+                         if (success) {
+                           success();
+                         }
+                       }
+                     }];
 }
 
 - (NSDictionary *)parametersForRequest {
@@ -77,6 +78,9 @@
   }
   if (self.offset) {
     requestParamters[@"offset"] = self.offset;
+  }
+  if (self.fieldSet) {
+    requestParamters[@"fields"] = [self.fieldSet generateFieldsQueryParameterValue];
   }
   return requestParamters;
 }
@@ -108,7 +112,7 @@
 
 - (void)loadNextObjectsWithSuccess:(RMBCompletion)success failure:(RMBFailure)failure {
   if (self.offset) {
-    [self loadObjectsWithSuccess:success failure:failure];
+    [self loadObjectsWithSuccess:success failure:failure reload:NO];
   }
 }
 

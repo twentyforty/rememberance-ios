@@ -14,6 +14,7 @@
 @protocol RMBHeaderViewDelegate <NSObject>
 
 - (void)backButtonPressed;
+- (void)bookmarkViewPressed;
 
 @end
 

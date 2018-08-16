@@ -18,6 +18,7 @@
 
 - (instancetype)init {
   RMBModelCollection *collection = [[RMBModelCollection alloc] initWithModelClass:[RMBScholar class] andRelativeRemotePath:@"scholars/"];
+  collection.fieldSet = [RMBModelFieldSet summaryFieldSetForModelClass:[RMBScholar class]];
   self = [super initWithCollection:collection];
   self.title = @"Scholars";
   return self;
@@ -25,7 +26,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
-//  [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  [self.tableView reloadData];
 }
 
 - (Class)tableViewCellClass {

@@ -13,9 +13,11 @@
 #import "RMBSeriesProgressView.h"
 #import "UIColor+RMBAdditions.h"
 #import "RMBBookmarkView.h"
+#import "UIImage+RMBAdditions.h"
 
 @interface RMBVideoSeriesCell () <MGSwipeTableCellDelegate>
 
+@property (strong, nonatomic, readwrite) UILabel *headerLabel;
 @property (strong, nonatomic, readwrite) UIImageView *videoImageView;
 @property (strong, nonatomic, readwrite) RMBBookmarkView *bookmarkView;
 @property (strong, nonatomic, readwrite) UILabel *videoSeriesTitleLabel;
@@ -42,11 +44,11 @@
       make.bottom.lessThanOrEqualTo(self.contentView.mas_bottom).with.offset(-8);
     }];
     
-    self.bookmarkView = [[RMBBookmarkView alloc] initWithSize:16];
+    self.bookmarkView = [[RMBBookmarkView alloc] initWithSize:16 permanent:NO];
     [self.contentView addSubview:self.bookmarkView];
     [self.bookmarkView mas_makeConstraints:^(MASConstraintMaker *make) {
       make.top.equalTo(self.videoImageView);
-      make.right.equalTo(self.contentView).offset(-8);
+      make.right.equalTo(self.contentView).offset(-16);
       make.width.equalTo(@(16));
       make.height.equalTo(@(16));
     }];
@@ -60,7 +62,7 @@
     [self.videoSeriesTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
       make.left.equalTo(self.videoImageView.mas_right).offset(8);
       make.top.equalTo(self.videoImageView);
-      make.right.equalTo(self.bookmarkView).offset(-8);
+      make.right.equalTo(self.bookmarkView.mas_left).offset(-8);
     }];
     
     self.currentVideoLabel = [[UILabel alloc] init];
@@ -86,8 +88,15 @@
     
     self.scholarAvatarsView = [[RMBScholarAvatarsView alloc] initWithSize:32.0 interItemSpacing:-6.0];
     [self.contentView addSubview:self.scholarAvatarsView];
-    
-    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@"" icon:[UIImage imageNamed:@"star_unhighlighted"] backgroundColor:[UIColor renovatioBackground]];
+    [self.scholarAvatarsView mas_makeConstraints:^(MASConstraintMaker *make) {
+      make.height.equalTo(@32);
+      make.right.equalTo(self.contentView).offset(-8);
+      make.left.equalTo(self.videoImageView.mas_right).offset(8);
+      make.top.greaterThanOrEqualTo(self.progressView.mas_bottom).offset(10);
+      make.bottom.equalTo(self.contentView).offset(-8);
+    }];
+
+    MGSwipeButton *button = [MGSwipeButton buttonWithTitle:@"" icon:[[UIImage imageNamed:@"star_unhighlighted"] imageTintedWithColor:[UIColor renovatioRed]] backgroundColor:[UIColor renovatioBackground]];
     button.imageView.contentMode = UIViewContentModeScaleAspectFit;
     button.buttonWidth = 44;
     self.rightButtons = @[button];
@@ -103,10 +112,9 @@
   self.videoSeriesTitleLabel.text = videoSeries.title;
   
   self.currentVideoLabel.text = videoSeries.progressTitle;
-  self.progressView.totalCount = [videoSeries.videoSummaries count];
-  for (int i = 0; i < videoSeries.videoSummaries.count; i ++) {
-    RMBVideo *video = videoSeries.videoSummaries[i];
-    [self.progressView selectBubbleAtIndex:i selected:[video.progress.completed boolValue]];
+  self.progressView.totalCount = [videoSeries.videoCount integerValue];
+  for (NSNumber *index in videoSeries.completedVideoIndexes) {
+    [self.progressView selectBubbleAtIndex:[index integerValue] selected:YES];
   }
   self.bookmarkView.bookmarked = [self.videoSeries.bookmarkedByMe boolValue];
 
@@ -115,21 +123,6 @@
   }];
   
   self.scholarAvatarsView.scholars = self.videoSeries.scholars;
-  [self.scholarAvatarsView mas_remakeConstraints:^(MASConstraintMaker *make) {
-    //      make.height.equalTo(@32);
-    //      make.left.equalTo(self.currentVideoLabel);
-    //      make.top.equalTo(self.progressView.mas_bottom).offset(10);
-    //      make.bottom.equalTo(self.contentView).offset(-8);
-    
-    make.height.equalTo(@32);
-    CGFloat width = [RMBScholarAvatarsView widthWithScholars:self.videoSeries.scholars
-                                                        size:32.0
-                                            interItemSpacing:-6.0];
-    make.width.equalTo(@(width > 10 ? width : 0));
-    make.right.equalTo(self.contentView).offset(-32);
-    make.top.greaterThanOrEqualTo(self.progressView.mas_bottom).offset(10);
-    make.bottom.equalTo(self.contentView).offset(-8);
-  }];
 }
 
 - (void)swipeTableCellWillEndSwiping:(MGSwipeTableCell *)cell {

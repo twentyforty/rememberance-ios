@@ -10,10 +10,13 @@
 #import "RMBVideoSeries.h"
 #import "RMBVideo.h"
 #import "RMBScholar.h"
-#import "RMBResponse.h"
+#import "RMBListResponse.h"
 #import "RMBActiveUser.h"
+#import "RMBTokenResponse.h"
+#import "RMBActiveUserResponse.h"
+#import "RMBSignupResponse.h"
 
-//#define DEV
+#define DEV
 
 @interface RMBClient ()
 
@@ -39,8 +42,12 @@ static RMBClient *sharedClient = nil;
 
 - (void)setToken:(NSString *)token {
   _token = token;
-  NSString *headerValue = [NSString stringWithFormat:@"Token %@", token];
-  [self.requestSerializer setValue:headerValue forHTTPHeaderField:@"Authorization"];
+  if (token) {
+    NSString *headerValue = [NSString stringWithFormat:@"Token %@", token];
+    [self.requestSerializer setValue:headerValue forHTTPHeaderField:@"Authorization"];
+  } else {
+    [self.requestSerializer setValue:nil forHTTPHeaderField:@"Authorization"];
+  }
 }
 
 + (AFSecurityPolicy *)unsecureSecurityPolicy {
@@ -51,11 +58,20 @@ static RMBClient *sharedClient = nil;
 }
 
 + (NSDictionary<NSString *,id> *)responseClassesByResourcePath {
-  return @{@"**": [RMBResponse class]};
+  return @{@"videos/*": [OVCResponse class],
+           @"scholars/*": [OVCResponse class],
+           @"auth/token": [RMBTokenResponse class],
+           @"users/me": [RMBActiveUserResponse class],
+           @"users/register": [RMBSignupResponse class],
+           @"videos/continue": [RMBListResponse class],
+           @"videos/bookmarked": [RMBListResponse class],
+           @"**": [RMBListResponse class]};
 }
 
 + (NSDictionary<NSString *,id> *)modelClassesByResourcePath {
   return @{
+           @"videos/continue": [RMBVideo class],
+           @"videos/bookmarked": [RMBVideo class],
            @"users/me": [RMBActiveUser class],
            @"videoseries": [RMBVideoSeries class],
            @"videoseries/*": [RMBVideoSeries class],

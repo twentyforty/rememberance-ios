@@ -1,17 +1,17 @@
 //
-//  RMBResponse.m
+//  RMBActiveUserResponse.m
 //  Rememberance
 //
-//  Created by Aly Ibrahim on 8/2/18.
+//  Created by Aly Ibrahim on 8/13/18.
 //  Copyright © 2018 Aly Ibrahim. All rights reserved.
 //
 
-#import "RMBResponse.h"
+#import "RMBActiveUserResponse.h"
 
-@implementation RMBResponse
+@implementation RMBActiveUserResponse
 
 + (NSString *)resultKeyPathForJSONDictionary:(NSDictionary *)JSONDictionary {
-  return @"results";
+  return @"user";
 }
 
 @end

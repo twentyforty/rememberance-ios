@@ -18,6 +18,7 @@
 @property (strong, nonatomic, readwrite) YTPlayerView *player;
 @property (strong, nonatomic, readwrite) UIImageView *placeholder;
 @property (strong, nonatomic, readwrite) UIActivityIndicatorView *activityIndicator;
+@property (strong, nonatomic, readwrite) UIView *dimView;
 
 @end
 
@@ -36,23 +37,22 @@
 
     self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectZero];
     [self.contentView addSubview:self.activityIndicator];
-
-    [self.placeholder mas_makeConstraints:^(MASConstraintMaker *make) {
-      make.top.equalTo(@0);
-      make.left.equalTo(@0);
-      make.width.equalTo(self.contentView.mas_width);
-      make.height.equalTo(self.contentView.mas_height);
-    }];
-
+    
     [self.player mas_makeConstraints:^(MASConstraintMaker *make) {
       make.top.equalTo(@0);
       make.left.equalTo(@0);
       make.width.equalTo(self.contentView.mas_width);
-      make.height.equalTo(self.contentView.mas_height);
+      make.bottom.equalTo(self.contentView.mas_bottom);
+    }];
+    
+    [self.placeholder mas_makeConstraints:^(MASConstraintMaker *make) {
+      make.size.equalTo(self.player);
+      make.center.equalTo(self.placeholder);
     }];
     
     [self.activityIndicator mas_makeConstraints:^(MASConstraintMaker *make) {
-      make.center.equalTo(self.contentView);
+      make.size.equalTo(self.player);
+      make.center.equalTo(self.placeholder);
     }];
   }
   return self;
@@ -60,7 +60,6 @@
 
 - (void)setVideo:(RMBVideo *)video {
   _video = video;
-  
   [self.placeholder sd_setImageWithURL:self.video.imageMediumURL];
   [self.activityIndicator startAnimating];
   [self setNeedsLayout];
